@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="fractal">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>{{ meta.title }}</title>
+  <meta name="description" content="{{ meta.description }}"/>
+  <link rel="stylesheet" href="/src/styles/fractal.css">
+</head>
+<body>
+  <div id="app">
+    {{ content | safe }}
+  </div>
+  {% if page.scripts %}
+    {% for script in page.scripts %}
+      <script type="module" src="{{ script }}"></script>
+    {% endfor %}
+  {% endif %}
+</body>
+</html>

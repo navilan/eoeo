@@ -1,0 +1,6 @@
+persistent-terminals.log
+node_modules
+orig
+dist
+.duct
+CLAUDE.md

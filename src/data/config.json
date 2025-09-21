@@ -1,0 +1,64 @@
+{
+  "perspectives": [
+    {"value": "oneness", "label": "Oneness"},
+    {"value": "christianity", "label": "Christianity"},
+    {"value": "islam", "label": "Islam"},
+    {"value": "judaism", "label": "Judaism"},
+    {"value": "hinduism", "label": "Hinduism"},
+    {"value": "buddhism", "label": "Buddhism/Taoism"},
+    {"value": "zoro", "label": "Zoroastrianism"},
+    {"value": "confucian", "label": "Confucianism"},
+    {"value": "sikh", "label": "Sikhism"},
+    {"value": "jain", "label": "Jainism"},
+    {"value": "scienceRel", "label": "Science"}
+  ],
+  "wavePerspectives": [
+    {"value": "", "label": "None"},
+    {"value": "wave_devotional", "label": "Devotional"},
+    {"value": "wave_rationalist", "label": "Rationalist/Scholastic"},
+    {"value": "wave_reformation", "label": "Reformation/Revival"},
+    {"value": "wave_enlightenment", "label": "Enlightenment"},
+    {"value": "wave_cyclical", "label": "Cyclical Timeline"}
+  ],
+  "layers": [
+    {"value": "all", "label": "All (incl. Waves)"},
+    {"value": "0", "label": "0 Oneness"},
+    {"value": "1", "label": "1 Primary Dualities"},
+    {"value": "2", "label": "2 Major Families"},
+    {"value": "3", "label": "3 Sub-branches"},
+    {"value": "4", "label": "4+ Details"},
+    {"value": "5", "label": "5+ Finer"},
+    {"value": "6", "label": "6+ Micro"},
+    {"value": "7", "label": "7 Waves"}
+  ],
+  "metrics": [
+    {"value": "combined", "label": "Combined"},
+    {"value": "meaning", "label": "Meaning"},
+    {"value": "influence", "label": "Influence"},
+    {"value": "chronology", "label": "Chronology"}
+  ],
+  "legend": [
+    {"label": "Christianity", "color": "#60a5fa", "shape": "dot"},
+    {"label": "Hinduism", "color": "#f59e0b", "shape": "dot"},
+    {"label": "Buddhism", "color": "#34d399", "shape": "dot"},
+    {"label": "Islam", "color": "#f87171", "shape": "dot"},
+    {"label": "Judaism", "color": "#a78bfa", "shape": "dot"},
+    {"label": "Zoroastrianism", "color": "#f472b6", "shape": "dot"},
+    {"label": "Confucianism", "color": "#fbbf24", "shape": "dot"},
+    {"label": "Sikhism", "color": "#22d3ee", "shape": "dot"},
+    {"label": "Jainism", "color": "#fca5a5", "shape": "dot"},
+    {"label": "Science", "color": "#9ca3af", "shape": "dot"},
+    {"label": "Wave / Event", "color": "#60a5fa", "shape": "square"}
+  ],
+  "defaultState": {
+    "layerCap": "all",
+    "showReligions": true,
+    "showScience": true,
+    "showResonances": true,
+    "showWaves": true,
+    "perspective": "oneness",
+    "wavePerspective": "",
+    "metric": "combined",
+    "searchQuery": ""
+  }
+}
