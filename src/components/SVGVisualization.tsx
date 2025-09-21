@@ -56,7 +56,7 @@ function render(props: BaseProps<SVGVisualizationProps>) {
   const rings = [1, 2, 3, 4, 5, 6, 7].map(layer => (
     <circle
       fill="none"
-      stroke="rgba(255,255,255,0.08)"
+      stroke="rgba(255,255,255,0.15)"
       stroke-width="1.5"
       r={RING_RADII[layer as keyof typeof RING_RADII]}
       cx={0}

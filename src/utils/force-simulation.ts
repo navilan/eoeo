@@ -114,6 +114,7 @@ export class ForceSimulation {
     return neighbors
   }
 
+
   private simulationStep(): void {
     const focusId = this.waveFocusId || this.focusNodeId
     const distances = this.shortestDistances(focusId)
@@ -216,11 +217,11 @@ export class ForceSimulation {
     // Repulsion and collision detection
     for (let i = 0; i < this.nodes.length; i++) {
       const nodeA = this.nodes[i]
-      const radiusA = 10 + Math.min(110, (nodeA.label?.length || 0) * 3.0)
+      const radiusA = 15 + Math.min(110, (nodeA.label?.length || 0) * 3.0)  // Increased base from 10 to 15
 
       for (let j = i + 1; j < this.nodes.length; j++) {
         const nodeB = this.nodes[j]
-        const radiusB = 10 + Math.min(110, (nodeB.label?.length || 0) * 3.0)
+        const radiusB = 15 + Math.min(110, (nodeB.label?.length || 0) * 3.0)  // Increased base from 10 to 15
 
         const dx = nodeB.x - nodeA.x
         const dy = nodeB.y - nodeA.y
@@ -236,8 +237,7 @@ export class ForceSimulation {
 
         const distance = Math.sqrt(distanceSquared)
 
-        // Repulsion force
-        const repulsion = 1200 / (distanceSquared + 10)
+        const repulsion = 1600 / (distanceSquared + 10)
         const rx = (repulsion * dx) / distance
         const ry = (repulsion * dy) / distance
         nodeA.vx -= rx

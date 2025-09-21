@@ -115,7 +115,6 @@
   {"id": "string", "label": "String Theory / Multiverse", "group": "science", "kind": "science", "layer": 4},
   {"id": "wave_devotional", "label": "Wave: Devotional", "group": "wave", "kind": "wave", "layer": 7},
   {"id": "wave_rationalist", "label": "Wave: Rationalist/Scholastic", "group": "wave", "kind": "wave", "layer": 7},
-  {"id": "wave_cosmic", "label": "Wave: Cosmic Origins", "group": "wave", "kind": "wave", "layer": 7},
   {"id": "wave_reformation", "label": "Wave: Reformation/Revival", "group": "wave", "kind": "wave", "layer": 7},
   {"id": "wave_enlightenment", "label": "Wave: Enlightenment", "group": "wave", "kind": "wave", "layer": 7},
   {"id": "wave_cyclical", "label": "Wave: Cyclical Timeline", "group": "wave", "kind": "wave", "layer": 7}
