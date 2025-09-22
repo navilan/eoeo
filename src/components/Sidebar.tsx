@@ -121,9 +121,6 @@ function render(props: BaseProps<SidebarProps>) {
           />
         </div>
 
-        <small class="text-xs text-gray-500">
-          Spreadsheet: fractal_resonance_weights_v26.xlsx
-        </small>
       </CollapsibleSection>
 
       <CollapsibleSection title="Layers & Toggles" isOpen={true}>
