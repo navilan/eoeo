@@ -197,6 +197,8 @@ function bind(
   // Pan/zoom state
   let isDragging = false
   let lastPointer = { x: 0, y: 0 }
+  let lastTouchDistance = 0
+  let lastTouchCenter = { x: 0, y: 0 }
 
   function updateGraph(nodes: Node[], edges: Edge[]): void {
     simulation.stop()
@@ -488,6 +490,86 @@ function bind(
     eventEmitter.emit('edgeClick', e.detail)
   }
 
+  // Touch event handlers
+  function getTouchCenter(touches: TouchList): { x: number, y: number } {
+    if (touches.length === 1) {
+      return { x: touches[0].clientX, y: touches[0].clientY }
+    } else if (touches.length === 2) {
+      return {
+        x: (touches[0].clientX + touches[1].clientX) / 2,
+        y: (touches[0].clientY + touches[1].clientY) / 2
+      }
+    }
+    return { x: 0, y: 0 }
+  }
+
+  function getTouchDistance(touches: TouchList): number {
+    if (touches.length < 2) return 0
+    const dx = touches[0].clientX - touches[1].clientX
+    const dy = touches[0].clientY - touches[1].clientY
+    return Math.sqrt(dx * dx + dy * dy)
+  }
+
+  function handleTouchStart(e: TouchEvent): void {
+    e.preventDefault()
+    isDragging = true
+
+    if (e.touches.length === 1) {
+      // Single touch - pan
+      lastPointer = { x: e.touches[0].clientX, y: e.touches[0].clientY }
+    } else if (e.touches.length === 2) {
+      // Two touches - pinch zoom
+      lastTouchCenter = getTouchCenter(e.touches)
+      lastTouchDistance = getTouchDistance(e.touches)
+    }
+
+    svg.style.cursor = 'grabbing'
+  }
+
+  function handleTouchMove(e: TouchEvent): void {
+    e.preventDefault()
+    if (!isDragging) return
+
+    if (e.touches.length === 1) {
+      // Single touch - pan
+      const dx = e.touches[0].clientX - lastPointer.x
+      const dy = e.touches[0].clientY - lastPointer.y
+
+      currentTransform.x += dx
+      currentTransform.y += dy
+
+      lastPointer = { x: e.touches[0].clientX, y: e.touches[0].clientY }
+      applyTransform()
+    } else if (e.touches.length === 2) {
+      // Two touches - pinch zoom
+      const touchCenter = getTouchCenter(e.touches)
+      const touchDistance = getTouchDistance(e.touches)
+
+      if (lastTouchDistance > 0) {
+        const scale = touchDistance / lastTouchDistance
+        currentTransform.k = clamp(currentTransform.k * scale, 0.2, 8)
+      }
+
+      // Pan based on center movement
+      const dx = touchCenter.x - lastTouchCenter.x
+      const dy = touchCenter.y - lastTouchCenter.y
+      currentTransform.x += dx
+      currentTransform.y += dy
+
+      lastTouchCenter = touchCenter
+      lastTouchDistance = touchDistance
+      applyTransform()
+    }
+  }
+
+  function handleTouchEnd(e: TouchEvent): void {
+    e.preventDefault()
+    isDragging = false
+    svg.style.cursor = 'grab'
+    lastTouchDistance = 0
+    eventEmitter.emit('transform', currentTransform)
+  }
+
   function updateDimensions(width: number, height: number): void {
     // Update SVG viewBox
     const viewBox = `${-width/2} ${-height/2} ${width} ${height}`
@@ -507,6 +589,12 @@ function bind(
   window.addEventListener('mousemove', handleMouseMove)
   window.addEventListener('mouseup', handleMouseUp)
   svg.addEventListener('wheel', handleWheel, { passive: false })
+
+  // Touch event listeners
+  svg.addEventListener('touchstart', handleTouchStart, { passive: false })
+  svg.addEventListener('touchmove', handleTouchMove, { passive: false })
+  svg.addEventListener('touchend', handleTouchEnd, { passive: false })
+
   el.addEventListener('viz-node-click', handleNodeClick as EventListener)
   el.addEventListener('viz-edge-click', handleEdgeClick as EventListener)
 
@@ -529,6 +617,12 @@ function bind(
       window.removeEventListener('mousemove', handleMouseMove)
       window.removeEventListener('mouseup', handleMouseUp)
       svg.removeEventListener('wheel', handleWheel)
+
+      // Remove touch event listeners
+      svg.removeEventListener('touchstart', handleTouchStart)
+      svg.removeEventListener('touchmove', handleTouchMove)
+      svg.removeEventListener('touchend', handleTouchEnd)
+
       el.removeEventListener('viz-node-click', handleNodeClick as EventListener)
       el.removeEventListener('viz-edge-click', handleEdgeClick as EventListener)
     }
