@@ -7,8 +7,8 @@ export function getLayout() {
 
 export function getPageMeta() {
   return {
-    title: 'Echoes of Each Other',
-    description: 'Interactive visualization of religious and philosophical traditions and their connections across time.'
+    title: 'Echoes of Each Other - Interactive Visualization of Human Wisdom Traditions',
+    description: 'In times of strife, we need to remind ourselves that we are echoes of each other and ultimately one. Explore how religious, philosophical, and scientific traditions connect across time through an interactive visualization.'
   }
 }
 

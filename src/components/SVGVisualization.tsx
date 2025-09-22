@@ -20,6 +20,7 @@ export interface SVGVisualizationLogic {
   getTransform: () => Transform
   highlightSearch: (query: string) => void
   resetHighlight: () => void
+  updateDimensions: (width: number, height: number) => void
 }
 
 export interface SVGVisualizationProps {
@@ -487,6 +488,20 @@ function bind(
     eventEmitter.emit('edgeClick', e.detail)
   }
 
+  function updateDimensions(width: number, height: number): void {
+    // Update SVG viewBox
+    const viewBox = `${-width/2} ${-height/2} ${width} ${height}`
+    svg.setAttribute('viewBox', viewBox)
+
+    // Update simulation config
+    simulation.updateConfig({
+      width,
+      height,
+      centerX: 0,
+      centerY: 0
+    })
+  }
+
   // Event listeners
   svg.addEventListener('mousedown', handleMouseDown)
   window.addEventListener('mousemove', handleMouseMove)
@@ -507,6 +522,7 @@ function bind(
     getTransform,
     highlightSearch,
     resetHighlight,
+    updateDimensions,
     release: () => {
       simulation.destroy()
       svg.removeEventListener('mousedown', handleMouseDown)

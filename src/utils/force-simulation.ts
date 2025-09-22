@@ -47,6 +47,10 @@ export class ForceSimulation {
     this.metric = metric
   }
 
+  updateConfig(config: SimulationConfig): void {
+    this.config = config
+  }
+
   private randomPosition(min: number, max: number): number {
     return min + Math.random() * (max - min)
   }

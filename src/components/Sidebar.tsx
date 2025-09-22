@@ -2,7 +2,6 @@ import { createBlueprint, type BindReturn, type BaseComponentEvents, type BasePr
 import { EventEmitter } from "@duct-ui/core/shared"
 import { createRef } from "@duct-ui/core"
 import CollapsibleSection from "./CollapsibleSection.js"
-import SearchInput, { type SearchInputLogic } from "./SearchInput.js"
 import PerspectiveSelect, { type PerspectiveSelectLogic } from "./PerspectiveSelect.js"
 import ToggleGroup, { type ToggleGroupLogic, type ToggleItem } from "./ToggleGroup.js"
 import Legend from "./Legend.js"
@@ -44,7 +43,6 @@ export interface SidebarProps {
   'on:release'?: (el: HTMLElement) => void
 }
 
-const searchRef = createRef<SearchInputLogic>()
 const perspectiveRef = createRef<PerspectiveSelectLogic>()
 const wavePerspectiveRef = createRef<PerspectiveSelectLogic>()
 const togglesRef = createRef<ToggleGroupLogic>()
@@ -84,38 +82,33 @@ function render(props: BaseProps<SidebarProps>) {
       data-sidebar
       {...renderProps(moreProps)}
     >
-      <CollapsibleSection title="Search & Perspective" isOpen={true}>
-        <SearchInput
-          ref={searchRef}
-          placeholder="Search nodes..."
-          value={state.searchQuery}
-          on:search={(el: HTMLElement, query: string) => {
-            const appState = getGlobalAppState()
-            appState.setSearchQuery(query)
-          }}
-        />
+      <CollapsibleSection title="Perspective" isOpen={true}>
 
-        <PerspectiveSelect
-          ref={perspectiveRef}
-          label="Perspective"
-          options={config.perspectives}
-          value={state.perspective}
-          on:change={(el: HTMLElement, perspective: string) => {
-            const event = new CustomEvent('sidebar-perspective-change', { detail: perspective })
-            el.dispatchEvent(event)
-          }}
-        />
+        <div data-tutorial="perspective">
+          <PerspectiveSelect
+            ref={perspectiveRef}
+            label="Perspective"
+            options={config.perspectives}
+            value={state.perspective}
+            on:change={(el: HTMLElement, perspective: string) => {
+              const event = new CustomEvent('sidebar-perspective-change', { detail: perspective })
+              el.dispatchEvent(event)
+            }}
+          />
+        </div>
 
-        <PerspectiveSelect
-          ref={wavePerspectiveRef}
-          label="Wave perspective"
-          options={config.wavePerspectives}
-          value={state.wavePerspective}
-          on:change={(el: HTMLElement, wavePerspective: string) => {
-            const event = new CustomEvent('sidebar-wave-perspective-change', { detail: wavePerspective })
-            el.dispatchEvent(event)
-          }}
-        />
+        <div data-tutorial="wave-perspective">
+          <PerspectiveSelect
+            ref={wavePerspectiveRef}
+            label="Wave perspective"
+            options={config.wavePerspectives}
+            value={state.wavePerspective}
+            on:change={(el: HTMLElement, wavePerspective: string) => {
+              const event = new CustomEvent('sidebar-wave-perspective-change', { detail: wavePerspective })
+              el.dispatchEvent(event)
+            }}
+          />
+        </div>
 
         <div class="flex items-center gap-3">
           <Button
@@ -134,17 +127,19 @@ function render(props: BaseProps<SidebarProps>) {
       </CollapsibleSection>
 
       <CollapsibleSection title="Layers & Toggles" isOpen={true}>
-        <ToggleGroup
-          ref={togglesRef}
-          items={toggleItems}
-          columns={2}
-          on:change={(el: HTMLElement, toggleId: string, checked: boolean) => {
-            const appState = getGlobalAppState()
-            appState.setToggle(toggleId, checked)
-          }}
-        />
+        <div data-tutorial="toggles">
+          <ToggleGroup
+            ref={togglesRef}
+            items={toggleItems}
+            columns={2}
+            on:change={(el: HTMLElement, toggleId: string, checked: boolean) => {
+              const appState = getGlobalAppState()
+              appState.setToggle(toggleId, checked)
+            }}
+          />
+        </div>
 
-        <div class="space-y-2">
+        <div class="space-y-2" data-tutorial="layers">
           <label class="text-sm font-medium text-gray-300 block">
             Show up to layer:
           </label>
@@ -204,11 +199,6 @@ function bind(
   let isCurrentlyVisible = props.isVisible !== false
 
   function updateState(state: GraphState): void {
-    // Update search input
-    if (searchRef.current) {
-      searchRef.current.setValue(state.searchQuery)
-    }
-
     // Update perspective selects
     if (perspectiveRef.current) {
       perspectiveRef.current.setValue(state.perspective)
