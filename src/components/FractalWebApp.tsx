@@ -79,7 +79,7 @@ function render(props: BaseProps<FractalWebAppProps>) {
       {/* Toggle Button */}
       <Button
         label="☰"
-        class="fixed top-4 left-4 z-30 btn btn-square btn-sm bg-base-200 hover:bg-base-300 border-base-300 text-base-content shadow-lg lg:hidden"
+        class="fixed top-4 left-4 z-30 btn btn-square btn-sm bg-base-200 hover:bg-base-300 border-base-300 text-base-content shadow-lg"
         title="Toggle sidebar"
         data-drawer-trigger
         on:click={handleMenuToggle}
@@ -174,12 +174,14 @@ function bind(
     onComplete: () => {
       // Save that user has completed tutorial
       localStorage.setItem('fractal-tutorial-completed', 'true')
-      // Make drawer non-persistent again
+      // Make drawer non-persistent again but keep it open
       const drawerElement = container.querySelector('.drawer') as HTMLElement
       if (drawerElement) {
         drawerElement.setAttribute('data-drawer-persistent', 'false')
         drawerElement.classList.remove('drawer-persistent')
       }
+      // Ensure drawer stays open after tutorial
+      openDrawerDelayed()
     },
     onCancel: () => {
       // Save that user has dismissed tutorial
@@ -190,6 +192,8 @@ function bind(
         drawerElement.setAttribute('data-drawer-persistent', 'false')
         drawerElement.classList.remove('drawer-persistent')
       }
+      // Ensure drawer stays open after tutorial is cancelled
+      openDrawerDelayed()
     }
   })
 
@@ -199,6 +203,15 @@ function bind(
 
   function setState(updates: Partial<GraphState>): void {
     appState.updateState(updates)
+  }
+
+  function openDrawerDelayed(): void {
+    setTimeout(() => {
+      if (drawerRef.current) {
+        drawerRef.current.open()
+        isDrawerOpen = true
+      }
+    }, 200)
   }
 
   function startTutorial(): void {
