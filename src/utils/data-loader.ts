@@ -35,13 +35,13 @@ export function passByMetric(
 ): boolean {
   switch (metric) {
     case 'combined':
-      return (0.4 * meaning + 0.4 * influence + 0.2 * chronology) >= 70
+      return (0.4 * meaning + 0.4 * influence + 0.2 * chronology) >= 60
     case 'meaning':
-      return meaning >= 70
+      return meaning >= 65
     case 'influence':
-      return influence >= 55
+      return influence >= 50
     case 'chronology':
-      return chronology >= 90
+      return chronology >= 85
     default:
       return false
   }

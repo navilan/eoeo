@@ -21,6 +21,7 @@ export interface SVGVisualizationLogic {
   highlightSearch: (query: string) => void
   resetHighlight: () => void
   updateDimensions: (width: number, height: number) => void
+  resetLayout: () => void
 }
 
 export interface SVGVisualizationProps {
@@ -133,7 +134,7 @@ function render(props: BaseProps<SVGVisualizationProps>) {
     <svg
       viewBox={viewBox}
       class="w-full h-full block cursor-grab active:cursor-grabbing"
-      style="pointer-events: auto;"
+      style="pointer-events: auto; user-select: none; -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none;"
       data-svg-viz
       {...renderProps(moreProps)}
     >
@@ -584,6 +585,10 @@ function bind(
     })
   }
 
+  function resetLayout(): void {
+    simulation.resetLayout()
+  }
+
   // Event listeners
   svg.addEventListener('mousedown', handleMouseDown)
   window.addEventListener('mousemove', handleMouseMove)
@@ -611,6 +616,7 @@ function bind(
     highlightSearch,
     resetHighlight,
     updateDimensions,
+    resetLayout,
     release: () => {
       simulation.destroy()
       svg.removeEventListener('mousedown', handleMouseDown)

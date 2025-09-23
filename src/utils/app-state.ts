@@ -8,6 +8,7 @@ export interface AppStateEvents extends Record<string, any> {
   graphChange: (nodes: Node[], edges: Edge[]) => void
   transformChange: (transform: Transform) => void
   searchChange: (query: string) => void
+  resetLayout: () => void
 }
 
 export class AppState {
@@ -145,6 +146,7 @@ export class AppState {
 
   resetView(): void {
     this.setTransform({ x: 0, y: 0, k: 1 })
+    this.observable.emit('resetLayout', [])
   }
 
   // Batch state update

@@ -300,6 +300,19 @@ export class ForceSimulation {
     return this.edges
   }
 
+  resetLayout(): void {
+    // Re-randomize all node positions and reset velocities
+    for (const node of this.nodes) {
+      node.x = this.randomPosition(-150, 150)
+      node.y = this.randomPosition(-150, 150)
+      node.vx = 0
+      node.vy = 0
+    }
+
+    // Restart the simulation with fresh positions
+    this.start()
+  }
+
   destroy(): void {
     this.stop()
     this.nodes = []

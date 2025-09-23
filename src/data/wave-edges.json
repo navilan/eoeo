@@ -1,34 +1,274 @@
 [
-  {"source": "wave_devotional", "target": "sufism", "type": "wave", "meaning": 85, "influence": 80, "chronology": 80},
-  {"source": "wave_devotional", "target": "pureland", "type": "wave", "meaning": 80, "influence": 65, "chronology": 75},
-  {"source": "wave_devotional", "target": "xianMystic", "type": "wave", "meaning": 78, "influence": 60, "chronology": 70},
-  {"source": "wave_devotional", "target": "bhakti", "type": "wave", "meaning": 90, "influence": 85, "chronology": 85},
-  {"source": "wave_devotional", "target": "hasidic", "type": "wave", "meaning": 80, "influence": 70, "chronology": 80},
-  {"source": "wave_rationalist", "target": "sciMethod", "type": "wave", "meaning": 88, "influence": 92, "chronology": 96},
-  {"source": "wave_rationalist", "target": "catholic", "type": "wave", "meaning": 70, "influence": 80, "chronology": 80},
-  {"source": "wave_rationalist", "target": "nyaya", "type": "wave", "meaning": 78, "influence": 75, "chronology": 70},
-  {"source": "wave_rationalist", "target": "mimamsa", "type": "wave", "meaning": 72, "influence": 68, "chronology": 70},
-  {"source": "wave_rationalist", "target": "orthodoxJ", "type": "wave", "meaning": 70, "influence": 65, "chronology": 75},
-  {"source": "wave_rationalist", "target": "confucianClass", "type": "wave", "meaning": 76, "influence": 70, "chronology": 80},
-  {"source": "wave_reformation", "target": "protestant", "type": "wave", "meaning": 90, "influence": 95, "chronology": 95},
-  {"source": "wave_reformation", "target": "reformJ", "type": "wave", "meaning": 78, "influence": 75, "chronology": 90},
-  {"source": "wave_reformation", "target": "reconstructionistJ", "type": "wave", "meaning": 70, "influence": 65, "chronology": 88},
-  {"source": "wave_reformation", "target": "khalsa", "type": "wave", "meaning": 72, "influence": 70, "chronology": 85},
-  {"source": "wave_reformation", "target": "bhakti", "type": "wave", "meaning": 65, "influence": 60, "chronology": 80},
-  {"source": "wave_enlightenment", "target": "sciMethod", "type": "wave", "meaning": 88, "influence": 96, "chronology": 98},
-  {"source": "wave_enlightenment", "target": "conservativeJ", "type": "wave", "meaning": 68, "influence": 65, "chronology": 88},
-  {"source": "wave_enlightenment", "target": "modernOrthodox", "type": "wave", "meaning": 66, "influence": 60, "chronology": 88},
-  {"source": "wave_enlightenment", "target": "scienceRel", "type": "wave", "meaning": 80, "influence": 85, "chronology": 98},
-  {"source": "wave_enlightenment", "target": "confucian", "type": "wave", "meaning": 60, "influence": 55, "chronology": 70},
-  {"source": "wave_cyclical", "target": "hinduism", "type": "wave", "meaning": 88, "influence": 78, "chronology": 75},
-  {"source": "wave_cyclical", "target": "samkhya", "type": "wave", "meaning": 86, "influence": 72, "chronology": 75},
-  {"source": "wave_cyclical", "target": "vaishnavism", "type": "wave", "meaning": 84, "influence": 72, "chronology": 75},
-  {"source": "wave_cyclical", "target": "shaivism", "type": "wave", "meaning": 84, "influence": 72, "chronology": 75},
-  {"source": "wave_cyclical", "target": "jain", "type": "wave", "meaning": 90, "influence": 76, "chronology": 75},
-  {"source": "wave_cyclical", "target": "buddhism", "type": "wave", "meaning": 82, "influence": 70, "chronology": 75},
-  {"source": "wave_cyclical", "target": "taoPhil", "type": "wave", "meaning": 78, "influence": 65, "chronology": 75},
-  {"source": "wave_cyclical", "target": "zoro", "type": "wave", "meaning": 60, "influence": 55, "chronology": 70},
-  {"source": "wave_cyclical", "target": "confucian", "type": "wave", "meaning": 58, "influence": 50, "chronology": 70},
-  {"source": "wave_cyclical", "target": "string", "type": "wave", "meaning": 72, "influence": 60, "chronology": 98},
-  {"source": "wave_cyclical", "target": "relativity", "type": "wave", "meaning": 60, "influence": 52, "chronology": 98}
+  {
+    "source": "wave_devotional",
+    "target": "sufism",
+    "type": "wave",
+    "meaning": 85,
+    "influence": 80,
+    "chronology": 80
+  },
+  {
+    "source": "wave_devotional",
+    "target": "pureland",
+    "type": "wave",
+    "meaning": 80,
+    "influence": 65,
+    "chronology": 75
+  },
+  {
+    "source": "wave_devotional",
+    "target": "xianMystic",
+    "type": "wave",
+    "meaning": 78,
+    "influence": 60,
+    "chronology": 70
+  },
+  {
+    "source": "wave_devotional",
+    "target": "bhakti",
+    "type": "wave",
+    "meaning": 90,
+    "influence": 85,
+    "chronology": 85
+  },
+  {
+    "source": "wave_devotional",
+    "target": "hasidic",
+    "type": "wave",
+    "meaning": 80,
+    "influence": 70,
+    "chronology": 80
+  },
+  {
+    "source": "wave_rationalist",
+    "target": "sciMethod",
+    "type": "wave",
+    "meaning": 88,
+    "influence": 92,
+    "chronology": 96
+  },
+  {
+    "source": "wave_rationalist",
+    "target": "catholic",
+    "type": "wave",
+    "meaning": 70,
+    "influence": 80,
+    "chronology": 80
+  },
+  {
+    "source": "wave_rationalist",
+    "target": "nyaya",
+    "type": "wave",
+    "meaning": 78,
+    "influence": 75,
+    "chronology": 70
+  },
+  {
+    "source": "wave_rationalist",
+    "target": "mimamsa",
+    "type": "wave",
+    "meaning": 72,
+    "influence": 68,
+    "chronology": 70
+  },
+  {
+    "source": "wave_rationalist",
+    "target": "orthodoxJ",
+    "type": "wave",
+    "meaning": 70,
+    "influence": 65,
+    "chronology": 75
+  },
+  {
+    "source": "wave_rationalist",
+    "target": "confucianClass",
+    "type": "wave",
+    "meaning": 76,
+    "influence": 70,
+    "chronology": 80
+  },
+  {
+    "source": "wave_reformation",
+    "target": "protestant",
+    "type": "wave",
+    "meaning": 90,
+    "influence": 95,
+    "chronology": 95
+  },
+  {
+    "source": "wave_reformation",
+    "target": "reformJ",
+    "type": "wave",
+    "meaning": 78,
+    "influence": 75,
+    "chronology": 90
+  },
+  {
+    "source": "wave_reformation",
+    "target": "reconstructionistJ",
+    "type": "wave",
+    "meaning": 70,
+    "influence": 65,
+    "chronology": 88
+  },
+  {
+    "source": "wave_reformation",
+    "target": "khalsa",
+    "type": "wave",
+    "meaning": 72,
+    "influence": 70,
+    "chronology": 85
+  },
+  {
+    "source": "wave_reformation",
+    "target": "bhakti",
+    "type": "wave",
+    "meaning": 65,
+    "influence": 60,
+    "chronology": 80
+  },
+  {
+    "source": "wave_enlightenment",
+    "target": "sciMethod",
+    "type": "wave",
+    "meaning": 88,
+    "influence": 96,
+    "chronology": 98
+  },
+  {
+    "source": "wave_enlightenment",
+    "target": "conservativeJ",
+    "type": "wave",
+    "meaning": 68,
+    "influence": 65,
+    "chronology": 88
+  },
+  {
+    "source": "wave_enlightenment",
+    "target": "modernOrthodox",
+    "type": "wave",
+    "meaning": 66,
+    "influence": 60,
+    "chronology": 88
+  },
+  {
+    "source": "wave_enlightenment",
+    "target": "scienceRel",
+    "type": "wave",
+    "meaning": 80,
+    "influence": 85,
+    "chronology": 98
+  },
+  {
+    "source": "wave_enlightenment",
+    "target": "confucian",
+    "type": "wave",
+    "meaning": 60,
+    "influence": 55,
+    "chronology": 70
+  },
+  {
+    "source": "wave_cyclical",
+    "target": "hinduism",
+    "type": "wave",
+    "meaning": 88,
+    "influence": 78,
+    "chronology": 75
+  },
+  {
+    "source": "wave_cyclical",
+    "target": "samkhya",
+    "type": "wave",
+    "meaning": 86,
+    "influence": 72,
+    "chronology": 75
+  },
+  {
+    "source": "wave_cyclical",
+    "target": "vaishnavism",
+    "type": "wave",
+    "meaning": 84,
+    "influence": 72,
+    "chronology": 75
+  },
+  {
+    "source": "wave_cyclical",
+    "target": "shaivism",
+    "type": "wave",
+    "meaning": 84,
+    "influence": 72,
+    "chronology": 75
+  },
+  {
+    "source": "wave_cyclical",
+    "target": "jain",
+    "type": "wave",
+    "meaning": 90,
+    "influence": 76,
+    "chronology": 75
+  },
+  {
+    "source": "wave_cyclical",
+    "target": "buddhism",
+    "type": "wave",
+    "meaning": 82,
+    "influence": 70,
+    "chronology": 75
+  },
+  {
+    "source": "wave_cyclical",
+    "target": "taoPhil",
+    "type": "wave",
+    "meaning": 78,
+    "influence": 65,
+    "chronology": 75
+  },
+  {
+    "source": "wave_cyclical",
+    "target": "zoro",
+    "type": "wave",
+    "meaning": 60,
+    "influence": 55,
+    "chronology": 70
+  },
+  {
+    "source": "wave_cyclical",
+    "target": "confucian",
+    "type": "wave",
+    "meaning": 58,
+    "influence": 50,
+    "chronology": 70
+  },
+  {
+    "source": "wave_cyclical",
+    "target": "string",
+    "type": "wave",
+    "meaning": 72,
+    "influence": 60,
+    "chronology": 98
+  },
+  {
+    "source": "wave_cyclical",
+    "target": "relativity",
+    "type": "wave",
+    "meaning": 60,
+    "influence": 52,
+    "chronology": 98
+  },
+  {
+    "source": "wave_cyclical",
+    "target": "bigbang",
+    "type": "wave",
+    "meaning": 40,
+    "influence": 28,
+    "chronology": 99
+  },
+  {
+    "source": "wave_reformation",
+    "target": "salafism",
+    "type": "wave",
+    "meaning": 52,
+    "influence": 46,
+    "chronology": 98
+  }
 ]

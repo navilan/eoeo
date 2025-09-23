@@ -1,115 +1,607 @@
 [
-  {"source": "oneness", "target": "theistic", "type": "lineage"},
-  {"source": "oneness", "target": "nonTheistic", "type": "lineage"},
-  {"source": "theistic", "target": "monotheism", "type": "lineage"},
-  {"source": "theistic", "target": "polytheism", "type": "lineage"},
-  {"source": "nonTheistic", "target": "impersonalAbs", "type": "lineage"},
-  {"source": "nonTheistic", "target": "processEmpty", "type": "lineage"},
-  {"source": "nonTheistic", "target": "scienceRel", "type": "lineage"},
-  {"source": "monotheism", "target": "judaism", "type": "lineage"},
-  {"source": "monotheism", "target": "christianity", "type": "lineage"},
-  {"source": "monotheism", "target": "islam", "type": "lineage"},
-  {"source": "theistic", "target": "sikh", "type": "lineage"},
-  {"source": "polytheism", "target": "hinduism", "type": "lineage"},
-  {"source": "nonTheistic", "target": "buddhism", "type": "lineage"},
-  {"source": "nonTheistic", "target": "taoism", "type": "lineage"},
-  {"source": "nonTheistic", "target": "jain", "type": "lineage"},
-  {"source": "theistic", "target": "zoro", "type": "lineage"},
-  {"source": "nonTheistic", "target": "confucian", "type": "lineage"},
-  {"source": "judaism", "target": "secondTemple", "type": "lineage"},
-  {"source": "secondTemple", "target": "pharisees", "type": "lineage"},
-  {"source": "secondTemple", "target": "sadducees", "type": "lineage"},
-  {"source": "secondTemple", "target": "essenes", "type": "lineage"},
-  {"source": "judaism", "target": "rabbinic", "type": "lineage"},
-  {"source": "judaism", "target": "karaite", "type": "lineage"},
-  {"source": "rabbinic", "target": "orthodoxJ", "type": "lineage"},
-  {"source": "orthodoxJ", "target": "haredi", "type": "lineage"},
-  {"source": "orthodoxJ", "target": "sephardi", "type": "lineage"},
-  {"source": "orthodoxJ", "target": "ashkenazi", "type": "lineage"},
-  {"source": "rabbinic", "target": "conservativeJ", "type": "lineage"},
-  {"source": "rabbinic", "target": "reformJ", "type": "lineage"},
-  {"source": "rabbinic", "target": "reconstructionistJ", "type": "lineage"},
-  {"source": "rabbinic", "target": "kabbalah", "type": "lineage"},
-  {"source": "kabbalah", "target": "hasidic", "type": "lineage"},
-  {"source": "orthodoxJ", "target": "modernOrthodox", "type": "lineage"},
-  {"source": "zoro", "target": "mazdayasna", "type": "lineage"},
-  {"source": "zoro", "target": "zurvanism", "type": "lineage"},
-  {"source": "zoro", "target": "parsis", "type": "lineage"},
-  {"source": "sikh", "target": "nanakpanthi", "type": "lineage"},
-  {"source": "sikh", "target": "khalsa", "type": "lineage"},
-  {"source": "jain", "target": "digambara", "type": "lineage"},
-  {"source": "jain", "target": "shvetambara", "type": "lineage"},
-  {"source": "hinduism", "target": "vedanta", "type": "lineage"},
-  {"source": "hinduism", "target": "bhakti", "type": "lineage"},
-  {"source": "bhakti", "target": "shaivism", "type": "lineage"},
-  {"source": "bhakti", "target": "vaishnavism", "type": "lineage"},
-  {"source": "bhakti", "target": "shaktism", "type": "lineage"},
-  {"source": "vedanta", "target": "advaita", "type": "lineage"},
-  {"source": "vedanta", "target": "dvaita", "type": "lineage"},
-  {"source": "vedanta", "target": "vishishta", "type": "lineage"},
-  {"source": "vishishta", "target": "vadakalai", "type": "lineage"},
-  {"source": "vishishta", "target": "tenkalai", "type": "lineage"},
-  {"source": "vaishnavism", "target": "gaudiya", "type": "lineage"},
-  {"source": "shaivism", "target": "kashmirShaivism", "type": "lineage"},
-  {"source": "shaivism", "target": "shaivaSiddhanta", "type": "lineage"},
-  {"source": "hinduism", "target": "smartism", "type": "lineage"},
-  {"source": "hinduism", "target": "samkhya", "type": "lineage"},
-  {"source": "hinduism", "target": "yoga", "type": "lineage"},
-  {"source": "hinduism", "target": "nyaya", "type": "lineage"},
-  {"source": "hinduism", "target": "vaisheshika", "type": "lineage"},
-  {"source": "hinduism", "target": "mimamsa", "type": "lineage"},
-  {"source": "hinduism", "target": "tantra", "type": "lineage"},
-  {"source": "christianity", "target": "catholic", "type": "lineage"},
-  {"source": "christianity", "target": "orthodox", "type": "lineage"},
-  {"source": "christianity", "target": "orientalOrth", "type": "lineage"},
-  {"source": "christianity", "target": "protestant", "type": "lineage"},
-  {"source": "christianity", "target": "xianMystic", "type": "lineage"},
-  {"source": "protestant", "target": "anglican", "type": "lineage"},
-  {"source": "protestant", "target": "lutheran", "type": "lineage"},
-  {"source": "protestant", "target": "reformed", "type": "lineage"},
-  {"source": "protestant", "target": "baptist", "type": "lineage"},
-  {"source": "protestant", "target": "methodist", "type": "lineage"},
-  {"source": "protestant", "target": "pentecostal", "type": "lineage"},
-  {"source": "protestant", "target": "restorationist", "type": "lineage"},
-  {"source": "islam", "target": "sunni", "type": "lineage"},
-  {"source": "sunni", "target": "hanafi", "type": "lineage"},
-  {"source": "sunni", "target": "shafii", "type": "lineage"},
-  {"source": "sunni", "target": "maliki", "type": "lineage"},
-  {"source": "sunni", "target": "hanbali", "type": "lineage"},
-  {"source": "islam", "target": "shia", "type": "lineage"},
-  {"source": "shia", "target": "twelver", "type": "lineage"},
-  {"source": "shia", "target": "ismaili", "type": "lineage"},
-  {"source": "shia", "target": "zaydi", "type": "lineage"},
-  {"source": "islam", "target": "ibadi", "type": "lineage"},
-  {"source": "islam", "target": "sufism", "type": "lineage"},
-  {"source": "sufism", "target": "naqshbandi", "type": "lineage"},
-  {"source": "sufism", "target": "qadiri", "type": "lineage"},
-  {"source": "sufism", "target": "chishti", "type": "lineage"},
-  {"source": "sufism", "target": "mevlevi", "type": "lineage"},
-  {"source": "islam", "target": "salafism", "type": "lineage"},
-  {"source": "buddhism", "target": "theravada", "type": "lineage"},
-  {"source": "buddhism", "target": "mahayana", "type": "lineage"},
-  {"source": "buddhism", "target": "vajrayana", "type": "lineage"},
-  {"source": "buddhism", "target": "zen", "type": "lineage"},
-  {"source": "zen", "target": "soto", "type": "lineage"},
-  {"source": "zen", "target": "rinzai", "type": "lineage"},
-  {"source": "buddhism", "target": "chan", "type": "lineage"},
-  {"source": "buddhism", "target": "pureland", "type": "lineage"},
-  {"source": "buddhism", "target": "nichiren", "type": "lineage"},
-  {"source": "taoism", "target": "taoPhil", "type": "lineage"},
-  {"source": "taoism", "target": "taoRel", "type": "lineage"},
-  {"source": "confucian", "target": "confucianClass", "type": "lineage"},
-  {"source": "confucian", "target": "neoConfucian", "type": "lineage"},
-  {"source": "scienceRel", "target": "sciMethod", "type": "lineage"},
-  {"source": "scienceRel", "target": "classical", "type": "lineage"},
-  {"source": "classical", "target": "newtonian", "type": "lineage"},
-  {"source": "scienceRel", "target": "relativity", "type": "lineage"},
-  {"source": "scienceRel", "target": "quantum", "type": "lineage"},
-  {"source": "scienceRel", "target": "waveParticle", "type": "lineage"},
-  {"source": "scienceRel", "target": "heliocentric", "type": "lineage"},
-  {"source": "scienceRel", "target": "geocentric", "type": "lineage"},
-  {"source": "scienceRel", "target": "evolution", "type": "lineage"},
-  {"source": "scienceRel", "target": "genetics", "type": "lineage"},
-  {"source": "scienceRel", "target": "bigbang", "type": "lineage"},
-  {"source": "scienceRel", "target": "string", "type": "lineage"}
+  {
+    "source": "oneness",
+    "target": "theistic",
+    "type": "lineage"
+  },
+  {
+    "source": "oneness",
+    "target": "nonTheistic",
+    "type": "lineage"
+  },
+  {
+    "source": "theistic",
+    "target": "monotheism",
+    "type": "lineage"
+  },
+  {
+    "source": "theistic",
+    "target": "polytheism",
+    "type": "lineage"
+  },
+  {
+    "source": "nonTheistic",
+    "target": "impersonalAbs",
+    "type": "lineage"
+  },
+  {
+    "source": "nonTheistic",
+    "target": "processEmpty",
+    "type": "lineage"
+  },
+  {
+    "source": "nonTheistic",
+    "target": "scienceRel",
+    "type": "lineage"
+  },
+  {
+    "source": "monotheism",
+    "target": "judaism",
+    "type": "lineage"
+  },
+  {
+    "source": "monotheism",
+    "target": "christianity",
+    "type": "lineage"
+  },
+  {
+    "source": "monotheism",
+    "target": "islam",
+    "type": "lineage"
+  },
+  {
+    "source": "theistic",
+    "target": "sikh",
+    "type": "lineage"
+  },
+  {
+    "source": "polytheism",
+    "target": "hinduism",
+    "type": "lineage"
+  },
+  {
+    "source": "nonTheistic",
+    "target": "buddhism",
+    "type": "lineage"
+  },
+  {
+    "source": "nonTheistic",
+    "target": "taoism",
+    "type": "lineage"
+  },
+  {
+    "source": "nonTheistic",
+    "target": "jain",
+    "type": "lineage"
+  },
+  {
+    "source": "theistic",
+    "target": "zoro",
+    "type": "lineage"
+  },
+  {
+    "source": "nonTheistic",
+    "target": "confucian",
+    "type": "lineage"
+  },
+  {
+    "source": "judaism",
+    "target": "secondTemple",
+    "type": "lineage"
+  },
+  {
+    "source": "secondTemple",
+    "target": "pharisees",
+    "type": "lineage"
+  },
+  {
+    "source": "secondTemple",
+    "target": "sadducees",
+    "type": "lineage"
+  },
+  {
+    "source": "secondTemple",
+    "target": "essenes",
+    "type": "lineage"
+  },
+  {
+    "source": "judaism",
+    "target": "rabbinic",
+    "type": "lineage"
+  },
+  {
+    "source": "judaism",
+    "target": "karaite",
+    "type": "lineage"
+  },
+  {
+    "source": "rabbinic",
+    "target": "orthodoxJ",
+    "type": "lineage"
+  },
+  {
+    "source": "orthodoxJ",
+    "target": "haredi",
+    "type": "lineage"
+  },
+  {
+    "source": "orthodoxJ",
+    "target": "sephardi",
+    "type": "lineage"
+  },
+  {
+    "source": "orthodoxJ",
+    "target": "ashkenazi",
+    "type": "lineage"
+  },
+  {
+    "source": "rabbinic",
+    "target": "conservativeJ",
+    "type": "lineage"
+  },
+  {
+    "source": "rabbinic",
+    "target": "reformJ",
+    "type": "lineage"
+  },
+  {
+    "source": "rabbinic",
+    "target": "reconstructionistJ",
+    "type": "lineage"
+  },
+  {
+    "source": "rabbinic",
+    "target": "kabbalah",
+    "type": "lineage"
+  },
+  {
+    "source": "kabbalah",
+    "target": "hasidic",
+    "type": "lineage"
+  },
+  {
+    "source": "orthodoxJ",
+    "target": "modernOrthodox",
+    "type": "lineage"
+  },
+  {
+    "source": "zoro",
+    "target": "mazdayasna",
+    "type": "lineage"
+  },
+  {
+    "source": "zoro",
+    "target": "zurvanism",
+    "type": "lineage"
+  },
+  {
+    "source": "zoro",
+    "target": "parsis",
+    "type": "lineage"
+  },
+  {
+    "source": "sikh",
+    "target": "nanakpanthi",
+    "type": "lineage"
+  },
+  {
+    "source": "sikh",
+    "target": "khalsa",
+    "type": "lineage"
+  },
+  {
+    "source": "jain",
+    "target": "digambara",
+    "type": "lineage"
+  },
+  {
+    "source": "jain",
+    "target": "shvetambara",
+    "type": "lineage"
+  },
+  {
+    "source": "hinduism",
+    "target": "vedanta",
+    "type": "lineage"
+  },
+  {
+    "source": "hinduism",
+    "target": "bhakti",
+    "type": "lineage"
+  },
+  {
+    "source": "bhakti",
+    "target": "shaivism",
+    "type": "lineage"
+  },
+  {
+    "source": "bhakti",
+    "target": "vaishnavism",
+    "type": "lineage"
+  },
+  {
+    "source": "bhakti",
+    "target": "shaktism",
+    "type": "lineage"
+  },
+  {
+    "source": "vedanta",
+    "target": "advaita",
+    "type": "lineage"
+  },
+  {
+    "source": "vedanta",
+    "target": "dvaita",
+    "type": "lineage"
+  },
+  {
+    "source": "vedanta",
+    "target": "vishishta",
+    "type": "lineage"
+  },
+  {
+    "source": "vishishta",
+    "target": "vadakalai",
+    "type": "lineage"
+  },
+  {
+    "source": "vishishta",
+    "target": "tenkalai",
+    "type": "lineage"
+  },
+  {
+    "source": "vaishnavism",
+    "target": "gaudiya",
+    "type": "lineage"
+  },
+  {
+    "source": "shaivism",
+    "target": "kashmirShaivism",
+    "type": "lineage"
+  },
+  {
+    "source": "shaivism",
+    "target": "shaivaSiddhanta",
+    "type": "lineage"
+  },
+  {
+    "source": "hinduism",
+    "target": "smartism",
+    "type": "lineage"
+  },
+  {
+    "source": "hinduism",
+    "target": "samkhya",
+    "type": "lineage"
+  },
+  {
+    "source": "hinduism",
+    "target": "yoga",
+    "type": "lineage"
+  },
+  {
+    "source": "hinduism",
+    "target": "nyaya",
+    "type": "lineage"
+  },
+  {
+    "source": "hinduism",
+    "target": "vaisheshika",
+    "type": "lineage"
+  },
+  {
+    "source": "hinduism",
+    "target": "mimamsa",
+    "type": "lineage"
+  },
+  {
+    "source": "hinduism",
+    "target": "tantra",
+    "type": "lineage"
+  },
+  {
+    "source": "christianity",
+    "target": "catholic",
+    "type": "lineage"
+  },
+  {
+    "source": "christianity",
+    "target": "orthodox",
+    "type": "lineage"
+  },
+  {
+    "source": "christianity",
+    "target": "orientalOrth",
+    "type": "lineage"
+  },
+  {
+    "source": "christianity",
+    "target": "protestant",
+    "type": "lineage"
+  },
+  {
+    "source": "christianity",
+    "target": "xianMystic",
+    "type": "lineage"
+  },
+  {
+    "source": "protestant",
+    "target": "anglican",
+    "type": "lineage"
+  },
+  {
+    "source": "protestant",
+    "target": "lutheran",
+    "type": "lineage"
+  },
+  {
+    "source": "protestant",
+    "target": "reformed",
+    "type": "lineage"
+  },
+  {
+    "source": "protestant",
+    "target": "baptist",
+    "type": "lineage"
+  },
+  {
+    "source": "protestant",
+    "target": "methodist",
+    "type": "lineage"
+  },
+  {
+    "source": "protestant",
+    "target": "pentecostal",
+    "type": "lineage"
+  },
+  {
+    "source": "protestant",
+    "target": "restorationist",
+    "type": "lineage"
+  },
+  {
+    "source": "islam",
+    "target": "sunni",
+    "type": "lineage"
+  },
+  {
+    "source": "sunni",
+    "target": "hanafi",
+    "type": "lineage"
+  },
+  {
+    "source": "sunni",
+    "target": "shafii",
+    "type": "lineage"
+  },
+  {
+    "source": "sunni",
+    "target": "maliki",
+    "type": "lineage"
+  },
+  {
+    "source": "sunni",
+    "target": "hanbali",
+    "type": "lineage"
+  },
+  {
+    "source": "islam",
+    "target": "shia",
+    "type": "lineage"
+  },
+  {
+    "source": "shia",
+    "target": "twelver",
+    "type": "lineage"
+  },
+  {
+    "source": "shia",
+    "target": "ismaili",
+    "type": "lineage"
+  },
+  {
+    "source": "shia",
+    "target": "zaydi",
+    "type": "lineage"
+  },
+  {
+    "source": "islam",
+    "target": "ibadi",
+    "type": "lineage"
+  },
+  {
+    "source": "islam",
+    "target": "sufism",
+    "type": "lineage"
+  },
+  {
+    "source": "sufism",
+    "target": "naqshbandi",
+    "type": "lineage"
+  },
+  {
+    "source": "sufism",
+    "target": "qadiri",
+    "type": "lineage"
+  },
+  {
+    "source": "sufism",
+    "target": "chishti",
+    "type": "lineage"
+  },
+  {
+    "source": "sufism",
+    "target": "mevlevi",
+    "type": "lineage"
+  },
+  {
+    "source": "islam",
+    "target": "salafism",
+    "type": "lineage"
+  },
+  {
+    "source": "buddhism",
+    "target": "theravada",
+    "type": "lineage"
+  },
+  {
+    "source": "buddhism",
+    "target": "mahayana",
+    "type": "lineage"
+  },
+  {
+    "source": "buddhism",
+    "target": "vajrayana",
+    "type": "lineage"
+  },
+  {
+    "source": "buddhism",
+    "target": "zen",
+    "type": "lineage"
+  },
+  {
+    "source": "zen",
+    "target": "soto",
+    "type": "lineage"
+  },
+  {
+    "source": "zen",
+    "target": "rinzai",
+    "type": "lineage"
+  },
+  {
+    "source": "buddhism",
+    "target": "chan",
+    "type": "lineage"
+  },
+  {
+    "source": "buddhism",
+    "target": "pureland",
+    "type": "lineage"
+  },
+  {
+    "source": "buddhism",
+    "target": "nichiren",
+    "type": "lineage"
+  },
+  {
+    "source": "taoism",
+    "target": "taoPhil",
+    "type": "lineage"
+  },
+  {
+    "source": "taoism",
+    "target": "taoRel",
+    "type": "lineage"
+  },
+  {
+    "source": "confucian",
+    "target": "confucianClass",
+    "type": "lineage"
+  },
+  {
+    "source": "confucian",
+    "target": "neoConfucian",
+    "type": "lineage"
+  },
+  {
+    "source": "scienceRel",
+    "target": "sciMethod",
+    "type": "lineage"
+  },
+  {
+    "source": "scienceRel",
+    "target": "classical",
+    "type": "lineage"
+  },
+  {
+    "source": "classical",
+    "target": "newtonian",
+    "type": "lineage"
+  },
+  {
+    "source": "scienceRel",
+    "target": "relativity",
+    "type": "lineage"
+  },
+  {
+    "source": "scienceRel",
+    "target": "quantum",
+    "type": "lineage"
+  },
+  {
+    "source": "scienceRel",
+    "target": "waveParticle",
+    "type": "lineage"
+  },
+  {
+    "source": "scienceRel",
+    "target": "heliocentric",
+    "type": "lineage"
+  },
+  {
+    "source": "scienceRel",
+    "target": "geocentric",
+    "type": "lineage"
+  },
+  {
+    "source": "scienceRel",
+    "target": "evolution",
+    "type": "lineage"
+  },
+  {
+    "source": "scienceRel",
+    "target": "genetics",
+    "type": "lineage"
+  },
+  {
+    "source": "scienceRel",
+    "target": "bigbang",
+    "type": "lineage"
+  },
+  {
+    "source": "scienceRel",
+    "target": "string",
+    "type": "lineage"
+  },
+  {
+    "source": "islam",
+    "target": "kalam",
+    "type": "lineage"
+  },
+  {
+    "source": "sunni",
+    "target": "shafi",
+    "type": "lineage"
+  },
+  {
+    "source": "salafism",
+    "target": "wahhabism",
+    "type": "lineage"
+  },
+  {
+    "source": "kalam",
+    "target": "ashari",
+    "type": "lineage"
+  },
+  {
+    "source": "kalam",
+    "target": "maturidi",
+    "type": "lineage"
+  },
+  {
+    "source": "kalam",
+    "target": "mu_tazila",
+    "type": "lineage"
+  },
+  {
+    "source": "scienceRel",
+    "target": "cartesianDualism",
+    "type": "lineage"
+  },
+  {
+    "source": "cartesianDualism",
+    "target": "mindBodyDualism",
+    "type": "lineage"
+  }
 ]

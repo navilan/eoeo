@@ -271,6 +271,12 @@ function bind(
     }
   })
 
+  appState.on('resetLayout', () => {
+    if (visualizationRef.current) {
+      visualizationRef.current.resetLayout()
+    }
+  })
+
   // UI event handlers - simplified since components use global app state directly
 
   function handleResize(): void {
