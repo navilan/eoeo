@@ -97,7 +97,17 @@
 
   /* SVG Graph styles */
   .graph-ring {
-    @apply fill-none stroke-white/10 stroke-[1.5];
+    fill: none;
+    stroke: rgba(139, 92, 246, 0.15);
+    stroke-width: 1.5;
+  }
+
+  .graph-ring:nth-child(odd) {
+    stroke: rgba(168, 85, 247, 0.12);
+  }
+
+  .graph-ring:nth-child(even) {
+    stroke: rgba(124, 58, 237, 0.18);
   }
 
   .graph-edge {
