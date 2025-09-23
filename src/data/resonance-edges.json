@@ -326,5 +326,85 @@
     "influence": 15,
     "chronology": 99,
     "type": "cross"
+  },
+  {
+    "source": "tantra",
+    "target": "vajrayana",
+    "type": "cross",
+    "meaning": 90,
+    "influence": 80,
+    "chronology": 92
+  },
+  {
+    "source": "kashmirShaivism",
+    "target": "vajrayana",
+    "type": "cross",
+    "meaning": 85,
+    "influence": 70,
+    "chronology": 92
+  },
+  {
+    "source": "shaivaSiddhanta",
+    "target": "vajrayana",
+    "type": "cross",
+    "meaning": 75,
+    "influence": 60,
+    "chronology": 90
+  },
+  {
+    "source": "shaivism",
+    "target": "vajrayana",
+    "type": "cross",
+    "meaning": 78,
+    "influence": 60,
+    "chronology": 90
+  },
+  {
+    "source": "yoga",
+    "target": "vajrayana",
+    "type": "cross",
+    "meaning": 70,
+    "influence": 55,
+    "chronology": 90
+  },
+  {
+    "source": "bhakti",
+    "target": "pureland",
+    "type": "cross",
+    "meaning": 68,
+    "influence": 55,
+    "chronology": 90
+  },
+  {
+    "source": "vishishta",
+    "target": "pureland",
+    "type": "cross",
+    "meaning": 70,
+    "influence": 35,
+    "chronology": 95
+  },
+  {
+    "source": "advaita",
+    "target": "theravada",
+    "type": "cross",
+    "meaning": 65,
+    "influence": 30,
+    "chronology": 98
+  },
+  {
+    "source": "mahayana",
+    "target": "tantra",
+    "type": "cross",
+    "meaning": 72,
+    "influence": 60,
+    "chronology": 88
+  },
+  {
+    "source": "mahayana",
+    "target": "vajrayana",
+    "type": "cross",
+    "meaning": 78,
+    "influence": 65,
+    "chronology": 90
   }
 ]
