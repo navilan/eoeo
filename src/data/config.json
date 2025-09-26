@@ -103,14 +103,6 @@
     {
       "value": "6",
       "label": "6+ Micro"
-    },
-    {
-      "value": "7",
-      "label": "7 Waves"
-    },
-    {
-      "value": "8",
-      "label": "8 Archetypes"
     }
   ],
   "metrics": [
@@ -204,7 +196,7 @@
     }
   ],
   "defaultState": {
-    "layerCap": "8",
+    "layerCap": "6",
     "showReligions": true,
     "showScience": true,
     "showResonances": true,

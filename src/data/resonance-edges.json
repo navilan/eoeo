@@ -50,7 +50,7 @@
   {
     "source": "choiceless-awareness",
     "target": "advaita",
-    "type": "cross",
+    "type": "archetype",
     "meaning": 85,
     "influence": 60,
     "chronology": 85
@@ -58,7 +58,7 @@
   {
     "source": "choiceless-awareness",
     "target": "buddhism",
-    "type": "cross",
+    "type": "archetype",
     "meaning": 80,
     "influence": 60,
     "chronology": 85
@@ -66,7 +66,7 @@
   {
     "source": "choiceless-awareness",
     "target": "meta-analytic-language",
-    "type": "cross",
+    "type": "archetype",
     "meaning": 55,
     "influence": 45,
     "chronology": 50
@@ -74,7 +74,7 @@
   {
     "source": "choiceless-awareness",
     "target": "meta-phenomenology-existentialism",
-    "type": "cross",
+    "type": "archetype",
     "meaning": 75,
     "influence": 60,
     "chronology": 60
@@ -82,7 +82,7 @@
   {
     "source": "choiceless-awareness",
     "target": "zen",
-    "type": "cross",
+    "type": "archetype",
     "meaning": 95,
     "influence": 70,
     "chronology": 85
@@ -106,7 +106,7 @@
   {
     "source": "dialectic",
     "target": "bhakti",
-    "type": "cross",
+    "type": "archetype",
     "meaning": 70,
     "influence": 55,
     "chronology": 80
@@ -114,7 +114,7 @@
   {
     "source": "dialectic",
     "target": "meta-dialectical-materialism",
-    "type": "cross",
+    "type": "archetype",
     "meaning": 90,
     "influence": 85,
     "chronology": 55
@@ -122,7 +122,7 @@
   {
     "source": "dialectic",
     "target": "meta-german-idealism",
-    "type": "cross",
+    "type": "archetype",
     "meaning": 82,
     "influence": 70,
     "chronology": 60
@@ -130,7 +130,7 @@
   {
     "source": "dialectic",
     "target": "protestant",
-    "type": "cross",
+    "type": "archetype",
     "meaning": 75,
     "influence": 65,
     "chronology": 85
@@ -138,7 +138,7 @@
   {
     "source": "dialectic",
     "target": "relativity",
-    "type": "cross",
+    "type": "archetype",
     "meaning": 65,
     "influence": 50,
     "chronology": 80
@@ -146,7 +146,7 @@
   {
     "source": "dialectic",
     "target": "sufism",
-    "type": "cross",
+    "type": "archetype",
     "meaning": 70,
     "influence": 55,
     "chronology": 80
@@ -154,7 +154,7 @@
   {
     "source": "dualism",
     "target": "christianity",
-    "type": "cross",
+    "type": "archetype",
     "meaning": 70,
     "influence": 65,
     "chronology": 85
@@ -162,7 +162,7 @@
   {
     "source": "dualism",
     "target": "dvaita",
-    "type": "cross",
+    "type": "archetype",
     "meaning": 95,
     "influence": 80,
     "chronology": 90
@@ -170,7 +170,7 @@
   {
     "source": "dualism",
     "target": "islam",
-    "type": "cross",
+    "type": "archetype",
     "meaning": 65,
     "influence": 60,
     "chronology": 80
@@ -178,7 +178,7 @@
   {
     "source": "dualism",
     "target": "meta-materialism",
-    "type": "cross",
+    "type": "archetype",
     "meaning": 60,
     "influence": 35,
     "chronology": 60
@@ -186,7 +186,7 @@
   {
     "source": "dualism",
     "target": "meta-rationalism",
-    "type": "cross",
+    "type": "archetype",
     "meaning": 88,
     "influence": 60,
     "chronology": 60
@@ -194,7 +194,7 @@
   {
     "source": "dualism",
     "target": "orthodox",
-    "type": "cross",
+    "type": "archetype",
     "meaning": 60,
     "influence": 55,
     "chronology": 80
@@ -202,7 +202,7 @@
   {
     "source": "dualism",
     "target": "zoro",
-    "type": "cross",
+    "type": "archetype",
     "meaning": 80,
     "influence": 70,
     "chronology": 85
@@ -258,7 +258,7 @@
   {
     "source": "eternal-recurrence",
     "target": "buddhism",
-    "type": "cross",
+    "type": "archetype",
     "meaning": 70,
     "influence": 50,
     "chronology": 85
@@ -266,7 +266,7 @@
   {
     "source": "eternal-recurrence",
     "target": "hinduism",
-    "type": "cross",
+    "type": "archetype",
     "meaning": 80,
     "influence": 55,
     "chronology": 90
@@ -274,7 +274,7 @@
   {
     "source": "eternal-recurrence",
     "target": "meta-idealism",
-    "type": "cross",
+    "type": "archetype",
     "meaning": 60,
     "influence": 35,
     "chronology": 50
@@ -282,7 +282,7 @@
   {
     "source": "eternal-recurrence",
     "target": "meta-modern-currents",
-    "type": "cross",
+    "type": "archetype",
     "meaning": 70,
     "influence": 40,
     "chronology": 60
@@ -314,7 +314,7 @@
   {
     "source": "idealism",
     "target": "advaita",
-    "type": "cross",
+    "type": "archetype",
     "meaning": 75,
     "influence": 60,
     "chronology": 85
@@ -322,7 +322,7 @@
   {
     "source": "idealism",
     "target": "catholic",
-    "type": "cross",
+    "type": "archetype",
     "meaning": 75,
     "influence": 70,
     "chronology": 85
@@ -330,7 +330,7 @@
   {
     "source": "idealism",
     "target": "meta-german-idealism",
-    "type": "cross",
+    "type": "archetype",
     "meaning": 90,
     "influence": 75,
     "chronology": 65
@@ -338,7 +338,7 @@
   {
     "source": "idealism",
     "target": "meta-idealism",
-    "type": "cross",
+    "type": "archetype",
     "meaning": 95,
     "influence": 85,
     "chronology": 70
@@ -346,7 +346,7 @@
   {
     "source": "idealism",
     "target": "orthodox",
-    "type": "cross",
+    "type": "archetype",
     "meaning": 70,
     "influence": 60,
     "chronology": 80
@@ -354,7 +354,7 @@
   {
     "source": "idealism",
     "target": "vishishta",
-    "type": "cross",
+    "type": "archetype",
     "meaning": 78,
     "influence": 65,
     "chronology": 85
@@ -362,7 +362,7 @@
   {
     "source": "idealism",
     "target": "xianMystic",
-    "type": "cross",
+    "type": "archetype",
     "meaning": 80,
     "influence": 60,
     "chronology": 85
@@ -418,7 +418,7 @@
   {
     "source": "limits-language",
     "target": "buddhism",
-    "type": "cross",
+    "type": "archetype",
     "meaning": 80,
     "influence": 60,
     "chronology": 85
@@ -426,7 +426,7 @@
   {
     "source": "limits-language",
     "target": "kabbalah",
-    "type": "cross",
+    "type": "archetype",
     "meaning": 60,
     "influence": 50,
     "chronology": 80
@@ -434,7 +434,7 @@
   {
     "source": "limits-language",
     "target": "meta-analytic-language",
-    "type": "cross",
+    "type": "archetype",
     "meaning": 92,
     "influence": 80,
     "chronology": 70
@@ -442,7 +442,7 @@
   {
     "source": "limits-language",
     "target": "meta-phenomenology-existentialism",
-    "type": "cross",
+    "type": "archetype",
     "meaning": 70,
     "influence": 55,
     "chronology": 60
@@ -450,7 +450,7 @@
   {
     "source": "limits-language",
     "target": "xianMystic",
-    "type": "cross",
+    "type": "archetype",
     "meaning": 70,
     "influence": 55,
     "chronology": 80
@@ -458,7 +458,7 @@
   {
     "source": "limits-language",
     "target": "zen",
-    "type": "cross",
+    "type": "archetype",
     "meaning": 85,
     "influence": 70,
     "chronology": 85
@@ -482,7 +482,7 @@
   {
     "source": "materialism",
     "target": "classical",
-    "type": "cross",
+    "type": "archetype",
     "meaning": 90,
     "influence": 85,
     "chronology": 90
@@ -490,7 +490,7 @@
   {
     "source": "materialism",
     "target": "evolution",
-    "type": "cross",
+    "type": "archetype",
     "meaning": 90,
     "influence": 80,
     "chronology": 95
@@ -498,7 +498,7 @@
   {
     "source": "materialism",
     "target": "meta-atomism",
-    "type": "cross",
+    "type": "archetype",
     "meaning": 92,
     "influence": 80,
     "chronology": 70
@@ -506,7 +506,7 @@
   {
     "source": "materialism",
     "target": "meta-dialectical-materialism",
-    "type": "cross",
+    "type": "archetype",
     "meaning": 85,
     "influence": 80,
     "chronology": 50
@@ -514,7 +514,7 @@
   {
     "source": "materialism",
     "target": "meta-materialism",
-    "type": "cross",
+    "type": "archetype",
     "meaning": 95,
     "influence": 85,
     "chronology": 75
@@ -522,7 +522,7 @@
   {
     "source": "materialism",
     "target": "meta-objectivism",
-    "type": "cross",
+    "type": "archetype",
     "meaning": 80,
     "influence": 55,
     "chronology": 45
@@ -530,7 +530,7 @@
   {
     "source": "materialism",
     "target": "quantum",
-    "type": "cross",
+    "type": "archetype",
     "meaning": 60,
     "influence": 50,
     "chronology": 85
@@ -538,7 +538,7 @@
   {
     "source": "materialism",
     "target": "relativity",
-    "type": "cross",
+    "type": "archetype",
     "meaning": 65,
     "influence": 55,
     "chronology": 85
@@ -554,7 +554,7 @@
   {
     "source": "monadology",
     "target": "jain",
-    "type": "cross",
+    "type": "archetype",
     "meaning": 85,
     "influence": 80,
     "chronology": 90
@@ -562,7 +562,7 @@
   {
     "source": "monadology",
     "target": "meta-atomism",
-    "type": "cross",
+    "type": "archetype",
     "meaning": 72,
     "influence": 55,
     "chronology": 50
@@ -570,7 +570,7 @@
   {
     "source": "monadology",
     "target": "meta-rationalism",
-    "type": "cross",
+    "type": "archetype",
     "meaning": 78,
     "influence": 60,
     "chronology": 55
@@ -578,7 +578,7 @@
   {
     "source": "monadology",
     "target": "theravada",
-    "type": "cross",
+    "type": "archetype",
     "meaning": 75,
     "influence": 70,
     "chronology": 85
@@ -586,7 +586,7 @@
   {
     "source": "monism",
     "target": "advaita",
-    "type": "cross",
+    "type": "archetype",
     "meaning": 95,
     "influence": 80,
     "chronology": 90
@@ -594,7 +594,7 @@
   {
     "source": "monism",
     "target": "kabbalah",
-    "type": "cross",
+    "type": "archetype",
     "meaning": 75,
     "influence": 55,
     "chronology": 80
@@ -602,7 +602,7 @@
   {
     "source": "monism",
     "target": "meta-idealism",
-    "type": "cross",
+    "type": "archetype",
     "meaning": 88,
     "influence": 65,
     "chronology": 60
@@ -610,7 +610,7 @@
   {
     "source": "monism",
     "target": "meta-neoplatonism",
-    "type": "cross",
+    "type": "archetype",
     "meaning": 82,
     "influence": 55,
     "chronology": 55
@@ -618,7 +618,7 @@
   {
     "source": "monism",
     "target": "meta-parmenides",
-    "type": "cross",
+    "type": "archetype",
     "meaning": 95,
     "influence": 75,
     "chronology": 70
@@ -626,7 +626,7 @@
   {
     "source": "monism",
     "target": "quantum",
-    "type": "cross",
+    "type": "archetype",
     "meaning": 80,
     "influence": 50,
     "chronology": 95
@@ -634,7 +634,7 @@
   {
     "source": "monism",
     "target": "sufism",
-    "type": "cross",
+    "type": "archetype",
     "meaning": 80,
     "influence": 55,
     "chronology": 80
@@ -642,7 +642,7 @@
   {
     "source": "monism",
     "target": "taoism",
-    "type": "cross",
+    "type": "archetype",
     "meaning": 85,
     "influence": 60,
     "chronology": 85
@@ -650,7 +650,7 @@
   {
     "source": "monism",
     "target": "vishishta",
-    "type": "cross",
+    "type": "archetype",
     "meaning": 82,
     "influence": 70,
     "chronology": 85
@@ -658,7 +658,7 @@
   {
     "source": "monism",
     "target": "xianMystic",
-    "type": "cross",
+    "type": "archetype",
     "meaning": 70,
     "influence": 45,
     "chronology": 75

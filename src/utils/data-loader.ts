@@ -23,9 +23,13 @@ export function getNodeColor(groupName: string): string {
 }
 
 export function nodeAllowed(node: Node, layerCap: LayerCap): boolean {
-  // Handle archetype nodes
+  // Archetype nodes are now controlled by toggles, not layers
   if (node.layer === 'archetypes') {
-    return parseInt(layerCap) >= 8
+    return true
+  }
+  // Wave nodes are now controlled by toggles, not layers
+  if (node.kind === 'wave') {
+    return true
   }
   return typeof node.layer === 'number' && node.layer <= parseInt(layerCap)
 }

@@ -133,6 +133,13 @@
     stroke-dasharray: 1 4;
   }
 
+  .graph-edge-archetype {
+    stroke: #d97706;
+    stroke-opacity: 0.80;
+    stroke-width: 1.8;
+    stroke-dasharray: 2 2;
+  }
+
   .graph-edge-spine {
     stroke: #fcd34d;
     stroke-opacity: 0.95;

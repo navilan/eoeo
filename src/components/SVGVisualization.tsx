@@ -260,6 +260,8 @@ function bind(
         edgeEl.setAttribute('class', 'graph-edge-cross')
       } else if (edge.type === 'wave') {
         edgeEl.setAttribute('class', 'graph-edge-wave')
+      } else if (edge.type === 'archetype') {
+        edgeEl.setAttribute('class', 'graph-edge-archetype')
       } else {
         edgeEl.setAttribute('class', 'graph-edge')
       }

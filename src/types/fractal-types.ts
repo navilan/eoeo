@@ -10,7 +10,7 @@ export interface Node {
 export interface Edge {
   source: string
   target: string
-  type: 'lineage' | 'cross' | 'wave'
+  type: 'lineage' | 'cross' | 'wave' | 'archetype'
   meaning?: number
   influence?: number
   chronology?: number
@@ -24,7 +24,7 @@ export interface SimulationNode extends Node {
 }
 
 export type MetricType = 'combined' | 'meaning' | 'influence' | 'chronology'
-export type LayerCap = '0' | '1' | '2' | '3' | '4' | '5' | '6' | '7' | '8'
+export type LayerCap = '0' | '1' | '2' | '3' | '4' | '5' | '6'
 export type GroupType = keyof typeof import('../data/group-colors.json')
 
 export interface GraphState {

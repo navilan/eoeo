@@ -151,11 +151,15 @@ export class ForceSimulation {
           break
         case 'cross':
           baseLength = 160
-          springStrength = 0.02
+          springStrength = 0.01
           break
         case 'wave':
-          baseLength = 180
-          springStrength = 0.015
+          baseLength = 250
+          springStrength = 0.008
+          break
+        case 'archetype':
+          baseLength = 280
+          springStrength = 0.005
           break
         default:
           baseLength = 140
