@@ -201,6 +201,8 @@
     "showScience": true,
     "showResonances": true,
     "showWaves": true,
+    "showArchetypes": false,
+    "showPhilosophy": true,
     "perspective": "oneness",
     "wavePerspective": "",
     "metric": "combined",

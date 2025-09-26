@@ -355,9 +355,20 @@ function bind(
   }
 
   function updateState(state: GraphState): void {
+    const prevWavePerspective = currentState.wavePerspective
     currentState = state
     simulation.setFocus(state.perspective, state.wavePerspective)
     simulation.setMetric(state.metric)
+
+    // Re-render and restart simulation if wave perspective changed
+    if (prevWavePerspective !== state.wavePerspective) {
+      console.log('Wave perspective changed from', prevWavePerspective, 'to', state.wavePerspective)
+      if (state.wavePerspective === '') {
+        console.log('Wave perspective set to None - resetting view')
+      }
+      reRenderGraph()
+      simulation.start()
+    }
 
     // Update search highlighting
     if (state.searchQuery !== searchQuery) {

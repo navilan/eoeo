@@ -245,7 +245,14 @@ export class ForceSimulation {
 
         const distance = Math.sqrt(distanceSquared)
 
-        const repulsion = 1600 / (distanceSquared + 10)
+        // Increase repulsion for archetype and wave nodes
+        let repulsionBase = 1600
+        if (nodeA.kind === 'archetype' || nodeA.kind === 'wave' ||
+            nodeB.kind === 'archetype' || nodeB.kind === 'wave') {
+          repulsionBase = 3200  // Double repulsion for archetype/wave nodes
+        }
+
+        const repulsion = repulsionBase / (distanceSquared + 10)
         const rx = (repulsion * dx) / distance
         const ry = (repulsion * dy) / distance
         nodeA.vx -= rx

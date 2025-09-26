@@ -785,7 +785,7 @@
   },
   {
     "id": "scienceRel",
-    "label": "Science (as Religion)",
+    "label": "Science",
     "group": "science",
     "kind": "science",
     "layer": 2

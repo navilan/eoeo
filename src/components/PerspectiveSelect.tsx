@@ -51,8 +51,8 @@ function render(props: BaseProps<PerspectiveSelectProps>) {
         selectedIconClass="w-4 h-4 mr-2"
         data-perspective-select
         on:selectionChange={(el: HTMLElement, item: SelectItem, index: number) => {
-          const selectValue = item.attributes?.['data-value'] || options[index]?.value
-          if (selectValue) {
+          const selectValue = item.attributes?.['data-value'] ?? options[index]?.value
+          if (selectValue !== undefined) {
             // Determine if this is main perspective or wave perspective based on label
             const appState = getGlobalAppState()
             if (label.toLowerCase().includes('wave')) {

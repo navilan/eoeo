@@ -25,7 +25,7 @@ export class AppState {
       showScience: config.defaultState.showScience,
       showResonances: config.defaultState.showResonances,
       showWaves: config.defaultState.showWaves,
-      showArchetypes: true,
+      showArchetypes: false,
       showPhilosophy: true,
       perspective: config.defaultState.perspective,
       wavePerspective: config.defaultState.wavePerspective,
