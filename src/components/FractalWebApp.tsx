@@ -145,8 +145,11 @@ function render(props: BaseProps<FractalWebAppProps>) {
             </div>
 
             {/* Built with Duct Attribution */}
-            <div class="fixed left-4 bottom-4 z-10 text-xs px-3 py-2 rounded-lg bg-base-200/80 text-base-content border border-base-300 backdrop-blur-sm">
-              Built with <a href="https://duct-ui.com" target="_blank" rel="noopener noreferrer" class="text-primary hover:text-primary-focus underline">Duct UI</a>
+            <div class="fixed left-4 bottom-4 z-10 text-xs px-3 py-2 rounded-lg bg-base-200/80 text-base-content border border-base-300 backdrop-blur-sm flex items-center">
+              Built with <a href="https://duct-ui.org" target="_blank" rel="noopener noreferrer" class="text-primary hover:opacity-90 underline inline-flex items-center gap-1 ml-1">
+                <img src="https://duct-ui.org/assets/duct-logo-DTh7D3qn.svg" alt="Duct UI" class="w-4 h-4" />
+                Duct UI
+              </a>
             </div>
           </div>
         }
