@@ -33,6 +33,7 @@ function render(props: BaseProps<GraphNodeProps>) {
   const transform = `translate(${node.x},${node.y})`
   const color = getNodeColor(node.group)
 
+
   let shape: JSX.Element
 
   if (node.kind === 'science') {
@@ -57,6 +58,33 @@ function render(props: BaseProps<GraphNodeProps>) {
         stroke={color}
         stroke-width="1.2"
         stroke-dasharray="3 3"
+      />
+    )
+  } else if (node.kind === 'archetype') {
+    // Filled square for archetype nodes (to test)
+    shape = (
+      <rect
+        x="-8"
+        y="-8"
+        width="16"
+        height="16"
+        fill={color}
+        stroke="#0b0f14"
+        stroke-width="1.2"
+      />
+    )
+  } else if (node.kind === 'philosophy') {
+    // Filled diamond for philosophy nodes (to test)
+    shape = (
+      <rect
+        x="-6"
+        y="-6"
+        width="12"
+        height="12"
+        fill={color}
+        stroke="#0b0f14"
+        stroke-width="1.2"
+        transform="rotate(45)"
       />
     )
   } else {

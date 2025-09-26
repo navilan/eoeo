@@ -28,28 +28,14 @@ function renderLegendShape(item: LegendItem): JSX.Element {
       )
     case 'hex':
       return (
-        <span class="relative">
+        <span class="relative inline-block w-3 h-3">
           <span
-            class="absolute"
+            class="absolute w-3 h-3"
             style={`
-              width: 0;
-              height: 0;
-              border-left: 7px solid transparent;
-              border-right: 7px solid transparent;
-              border-bottom: 12px solid ${item.color || '#9ca3af'};
-              transform: translateY(2px);
-            `}
-          ></span>
-          <span
-            class="absolute"
-            style={`
-              width: 0;
-              height: 0;
-              border-left: 7px solid transparent;
-              border-right: 7px solid transparent;
-              border-top: 12px solid ${item.color || '#9ca3af'};
-              left: -7px;
-              top: 12px;
+              background-color: ${item.color || '#9ca3af'};
+              clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+              left: 0;
+              top: 0;
             `}
           ></span>
         </span>
@@ -64,6 +50,37 @@ function renderLegendShape(item: LegendItem): JSX.Element {
           class="w-3 h-3 border border-gray-500"
           style={`background-color: ${item.color || '#60a5fa'}`}
         ></span>
+      )
+    case 'triangle':
+      return (
+        <span class="relative inline-block w-3 h-3">
+          <span
+            class="absolute"
+            style={`
+              width: 0;
+              height: 0;
+              border-left: 6px solid transparent;
+              border-right: 6px solid transparent;
+              border-bottom: 10px solid ${item.color || '#d97706'};
+              left: 0;
+              top: 1px;
+            `}
+          ></span>
+        </span>
+      )
+    case 'diamond':
+      return (
+        <span class="relative inline-block w-3 h-3">
+          <span
+            class="absolute w-3 h-3"
+            style={`
+              background-color: ${item.color || '#6d28d9'};
+              transform: rotate(45deg);
+              left: 0;
+              top: 0;
+            `}
+          ></span>
+        </span>
       )
     default:
       return (
@@ -141,6 +158,16 @@ function bind(
         case 'square':
           shapeElement.className = 'w-3 h-3 border border-gray-500'
           shapeElement.style.backgroundColor = item.color || '#60a5fa'
+          break
+        case 'triangle':
+          shapeElement.className = 'w-3 h-3'
+          shapeElement.style.clipPath = 'polygon(50% 0%, 0% 100%, 100% 100%)'
+          shapeElement.style.backgroundColor = item.color || '#d97706'
+          break
+        case 'diamond':
+          shapeElement.className = 'w-3 h-3'
+          shapeElement.style.transform = 'rotate(45deg)'
+          shapeElement.style.backgroundColor = item.color || '#6d28d9'
           break
         default:
           shapeElement.className = 'w-3 h-3 rounded-full border border-gray-500'

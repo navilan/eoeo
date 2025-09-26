@@ -97,7 +97,9 @@ function render(props: BaseProps<SVGVisualizationProps>) {
     const isVisible =
       (state.showReligions || simNode.kind !== 'religion') &&
       (state.showScience || simNode.kind !== 'science') &&
-      (state.showWaves || simNode.kind !== 'wave')
+      (state.showWaves || simNode.kind !== 'wave') &&
+      (state.showArchetypes || simNode.kind !== 'archetype') &&
+      (state.showPhilosophy || simNode.kind !== 'philosophy')
 
     return (
       <GraphNode
@@ -236,7 +238,9 @@ function bind(
       const sourceNode = nodeMap.get(edge.source)
       const targetNode = nodeMap.get(edge.target)
 
-      if (!sourceNode || !targetNode) return
+      if (!sourceNode || !targetNode) {
+        return
+      }
 
       const isSpine = edge.type === 'lineage' &&
         (edge.target === currentState.perspective || edge.source === currentState.perspective)
@@ -268,7 +272,10 @@ function bind(
       const isVisible =
         (currentState.showReligions || node.kind !== 'religion') &&
         (currentState.showScience || node.kind !== 'science') &&
-        (currentState.showWaves || node.kind !== 'wave')
+        (currentState.showWaves || node.kind !== 'wave') &&
+        (currentState.showArchetypes || node.kind !== 'archetype') &&
+        (currentState.showPhilosophy || node.kind !== 'philosophy')
+
 
       if (!isVisible) return
 
@@ -298,6 +305,27 @@ function bind(
         nodeShape.setAttribute('fill', '#60a5fa')
         nodeShape.setAttribute('stroke', '#0b0f14')
         nodeShape.setAttribute('stroke-width', '1.2')
+      } else if (node.kind === 'archetype') {
+        // Filled square for archetype nodes
+        nodeShape = document.createElementNS('http://www.w3.org/2000/svg', 'rect')
+        nodeShape.setAttribute('x', '-8')
+        nodeShape.setAttribute('y', '-8')
+        nodeShape.setAttribute('width', '16')
+        nodeShape.setAttribute('height', '16')
+        nodeShape.setAttribute('fill', color)
+        nodeShape.setAttribute('stroke', '#0b0f14')
+        nodeShape.setAttribute('stroke-width', '1.2')
+      } else if (node.kind === 'philosophy') {
+        // Filled diamond for philosophy nodes
+        nodeShape = document.createElementNS('http://www.w3.org/2000/svg', 'rect')
+        nodeShape.setAttribute('x', '-6')
+        nodeShape.setAttribute('y', '-6')
+        nodeShape.setAttribute('width', '12')
+        nodeShape.setAttribute('height', '12')
+        nodeShape.setAttribute('fill', color)
+        nodeShape.setAttribute('stroke', '#0b0f14')
+        nodeShape.setAttribute('stroke-width', '1.2')
+        nodeShape.setAttribute('transform', 'rotate(45)')
       } else {
         // Circle for religion nodes
         nodeShape = document.createElementNS('http://www.w3.org/2000/svg', 'circle')

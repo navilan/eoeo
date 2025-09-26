@@ -73,7 +73,9 @@ function render(props: BaseProps<SidebarProps>) {
     { id: 'religions', label: 'Religions', checked: state.showReligions },
     { id: 'science', label: 'Science', checked: state.showScience },
     { id: 'resonances', label: 'Resonances', checked: state.showResonances },
-    { id: 'waves', label: 'Waves', checked: state.showWaves }
+    { id: 'waves', label: 'Waves', checked: state.showWaves },
+    { id: 'archetypes', label: 'Archetypes', checked: state.showArchetypes },
+    { id: 'philosophy', label: 'Philosophy', checked: state.showPhilosophy }
   ]
 
   return (
@@ -210,6 +212,8 @@ function bind(
       togglesRef.current.setToggle('science', state.showScience)
       togglesRef.current.setToggle('resonances', state.showResonances)
       togglesRef.current.setToggle('waves', state.showWaves)
+      togglesRef.current.setToggle('archetypes', state.showArchetypes)
+      togglesRef.current.setToggle('philosophy', state.showPhilosophy)
     }
 
     // Update layer and metric selects would need select component refs

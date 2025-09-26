@@ -3,8 +3,8 @@ export interface Node {
   id: string
   label: string
   group: string
-  kind: 'religion' | 'science' | 'wave'
-  layer: number
+  kind: 'religion' | 'science' | 'wave' | 'archetype' | 'philosophy'
+  layer: number | 'archetypes'
 }
 
 export interface Edge {
@@ -33,6 +33,8 @@ export interface GraphState {
   showScience: boolean
   showResonances: boolean
   showWaves: boolean
+  showArchetypes: boolean
+  showPhilosophy: boolean
   perspective: string
   wavePerspective: string
   metric: MetricType
@@ -48,7 +50,7 @@ export interface Transform {
 export interface LegendItem {
   label: string
   color?: string
-  shape: 'dot' | 'hex' | 'wave' | 'square'
+  shape: 'dot' | 'hex' | 'wave' | 'square' | 'triangle' | 'diamond'
 }
 
 export interface PerspectiveOption {

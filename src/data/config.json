@@ -170,7 +170,7 @@
     {
       "label": "Metaphysics",
       "color": "#6d28d9",
-      "shape": "dot"
+      "shape": "diamond"
     },
     {
       "label": "Science",
@@ -196,6 +196,11 @@
       "label": "Zoroastrianism",
       "color": "#f472b6",
       "shape": "dot"
+    },
+    {
+      "label": "Archetypes",
+      "color": "#d97706",
+      "shape": "square"
     }
   ],
   "defaultState": {
@@ -209,5 +214,11 @@
     "metric": "combined",
     "searchQuery": ""
   },
-  "overlays": []
+  "overlays": [
+    {
+      "id": "archetypes",
+      "label": "Archetypes",
+      "isOverlay": true
+    }
+  ]
 }

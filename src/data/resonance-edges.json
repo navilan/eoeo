@@ -1,19 +1,291 @@
 [
   {
-    "source": "kabbalah",
-    "target": "advaita",
-    "meaning": 82,
+    "source": "advaita",
+    "target": "quantum",
+    "meaning": 85,
     "influence": 55,
-    "chronology": 75,
+    "chronology": 95,
     "type": "cross"
   },
   {
-    "source": "kabbalah",
-    "target": "mahayana",
-    "meaning": 78,
-    "influence": 45,
-    "chronology": 70,
+    "source": "advaita",
+    "target": "theravada",
+    "type": "cross",
+    "meaning": 65,
+    "influence": 30,
+    "chronology": 98
+  },
+  {
+    "source": "advaita",
+    "target": "zen",
+    "meaning": 85,
+    "influence": 80,
+    "chronology": 95,
     "type": "cross"
+  },
+  {
+    "source": "bhakti",
+    "target": "pureland",
+    "type": "cross",
+    "meaning": 68,
+    "influence": 55,
+    "chronology": 90
+  },
+  {
+    "source": "bhakti",
+    "target": "xianMystic",
+    "meaning": 70,
+    "influence": 60,
+    "chronology": 90,
+    "type": "cross"
+  },
+  {
+    "source": "buddhism",
+    "target": "bigbang",
+    "meaning": 44,
+    "influence": 18,
+    "chronology": 99,
+    "type": "cross"
+  },
+  {
+    "source": "choiceless-awareness",
+    "target": "advaita",
+    "type": "cross",
+    "meaning": 85,
+    "influence": 60,
+    "chronology": 85
+  },
+  {
+    "source": "choiceless-awareness",
+    "target": "buddhism",
+    "type": "cross",
+    "meaning": 80,
+    "influence": 60,
+    "chronology": 85
+  },
+  {
+    "source": "choiceless-awareness",
+    "target": "meta-analytic-language",
+    "type": "cross",
+    "meaning": 55,
+    "influence": 45,
+    "chronology": 50
+  },
+  {
+    "source": "choiceless-awareness",
+    "target": "meta-phenomenology-existentialism",
+    "type": "cross",
+    "meaning": 75,
+    "influence": 60,
+    "chronology": 60
+  },
+  {
+    "source": "choiceless-awareness",
+    "target": "zen",
+    "type": "cross",
+    "meaning": 95,
+    "influence": 70,
+    "chronology": 85
+  },
+  {
+    "source": "confucian",
+    "target": "sciMethod",
+    "meaning": 62,
+    "influence": 55,
+    "chronology": 98,
+    "type": "cross"
+  },
+  {
+    "source": "confucianClass",
+    "target": "sciMethod",
+    "meaning": 55,
+    "influence": 50,
+    "chronology": 85,
+    "type": "cross"
+  },
+  {
+    "source": "dialectic",
+    "target": "bhakti",
+    "type": "cross",
+    "meaning": 70,
+    "influence": 55,
+    "chronology": 80
+  },
+  {
+    "source": "dialectic",
+    "target": "meta-dialectical-materialism",
+    "type": "cross",
+    "meaning": 90,
+    "influence": 85,
+    "chronology": 55
+  },
+  {
+    "source": "dialectic",
+    "target": "meta-german-idealism",
+    "type": "cross",
+    "meaning": 82,
+    "influence": 70,
+    "chronology": 60
+  },
+  {
+    "source": "dialectic",
+    "target": "protestant",
+    "type": "cross",
+    "meaning": 75,
+    "influence": 65,
+    "chronology": 85
+  },
+  {
+    "source": "dialectic",
+    "target": "relativity",
+    "type": "cross",
+    "meaning": 65,
+    "influence": 50,
+    "chronology": 80
+  },
+  {
+    "source": "dialectic",
+    "target": "sufism",
+    "type": "cross",
+    "meaning": 70,
+    "influence": 55,
+    "chronology": 80
+  },
+  {
+    "source": "dualism",
+    "target": "christianity",
+    "type": "cross",
+    "meaning": 70,
+    "influence": 65,
+    "chronology": 85
+  },
+  {
+    "source": "dualism",
+    "target": "dvaita",
+    "type": "cross",
+    "meaning": 95,
+    "influence": 80,
+    "chronology": 90
+  },
+  {
+    "source": "dualism",
+    "target": "islam",
+    "type": "cross",
+    "meaning": 65,
+    "influence": 60,
+    "chronology": 80
+  },
+  {
+    "source": "dualism",
+    "target": "meta-materialism",
+    "type": "cross",
+    "meaning": 60,
+    "influence": 35,
+    "chronology": 60
+  },
+  {
+    "source": "dualism",
+    "target": "meta-rationalism",
+    "type": "cross",
+    "meaning": 88,
+    "influence": 60,
+    "chronology": 60
+  },
+  {
+    "source": "dualism",
+    "target": "orthodox",
+    "type": "cross",
+    "meaning": 60,
+    "influence": 55,
+    "chronology": 80
+  },
+  {
+    "source": "dualism",
+    "target": "zoro",
+    "type": "cross",
+    "meaning": 80,
+    "influence": 70,
+    "chronology": 85
+  },
+  {
+    "source": "dvaita",
+    "target": "ashari",
+    "meaning": 68,
+    "influence": 48,
+    "chronology": 95,
+    "type": "cross"
+  },
+  {
+    "source": "dvaita",
+    "target": "cartesianDualism",
+    "meaning": 62,
+    "influence": 30,
+    "chronology": 98,
+    "type": "cross"
+  },
+  {
+    "source": "dvaita",
+    "target": "catholic",
+    "meaning": 70,
+    "influence": 50,
+    "chronology": 95,
+    "type": "cross"
+  },
+  {
+    "source": "dvaita",
+    "target": "orthodox",
+    "meaning": 70,
+    "influence": 45,
+    "chronology": 95,
+    "type": "cross"
+  },
+  {
+    "source": "dvaita",
+    "target": "reformed",
+    "meaning": 65,
+    "influence": 55,
+    "chronology": 95,
+    "type": "cross"
+  },
+  {
+    "source": "dvaita",
+    "target": "zoro",
+    "meaning": 62,
+    "influence": 35,
+    "chronology": 98,
+    "type": "cross"
+  },
+  {
+    "source": "eternal-recurrence",
+    "target": "buddhism",
+    "type": "cross",
+    "meaning": 70,
+    "influence": 50,
+    "chronology": 85
+  },
+  {
+    "source": "eternal-recurrence",
+    "target": "hinduism",
+    "type": "cross",
+    "meaning": 80,
+    "influence": 55,
+    "chronology": 90
+  },
+  {
+    "source": "eternal-recurrence",
+    "target": "meta-idealism",
+    "type": "cross",
+    "meaning": 60,
+    "influence": 35,
+    "chronology": 50
+  },
+  {
+    "source": "eternal-recurrence",
+    "target": "meta-modern-currents",
+    "type": "cross",
+    "meaning": 70,
+    "influence": 40,
+    "chronology": 60
   },
   {
     "source": "hasidic",
@@ -32,51 +304,75 @@
     "type": "cross"
   },
   {
-    "source": "rabbinic",
-    "target": "nyaya",
-    "meaning": 65,
-    "influence": 40,
-    "chronology": 70,
+    "source": "hinduism",
+    "target": "bigbang",
+    "meaning": 48,
+    "influence": 25,
+    "chronology": 99,
     "type": "cross"
   },
   {
-    "source": "zoro",
-    "target": "judaism",
-    "meaning": 62,
-    "influence": 78,
-    "chronology": 85,
-    "type": "cross"
+    "source": "idealism",
+    "target": "advaita",
+    "type": "cross",
+    "meaning": 75,
+    "influence": 60,
+    "chronology": 85
   },
   {
-    "source": "zoro",
-    "target": "christianity",
-    "meaning": 58,
+    "source": "idealism",
+    "target": "catholic",
+    "type": "cross",
+    "meaning": 75,
     "influence": 70,
-    "chronology": 85,
-    "type": "cross"
+    "chronology": 85
   },
   {
-    "source": "zoro",
-    "target": "islam",
-    "meaning": 55,
+    "source": "idealism",
+    "target": "meta-german-idealism",
+    "type": "cross",
+    "meaning": 90,
+    "influence": 75,
+    "chronology": 65
+  },
+  {
+    "source": "idealism",
+    "target": "meta-idealism",
+    "type": "cross",
+    "meaning": 95,
+    "influence": 85,
+    "chronology": 70
+  },
+  {
+    "source": "idealism",
+    "target": "orthodox",
+    "type": "cross",
+    "meaning": 70,
+    "influence": 60,
+    "chronology": 80
+  },
+  {
+    "source": "idealism",
+    "target": "vishishta",
+    "type": "cross",
+    "meaning": 78,
     "influence": 65,
-    "chronology": 85,
-    "type": "cross"
+    "chronology": 85
   },
   {
-    "source": "sikh",
-    "target": "bhakti",
+    "source": "idealism",
+    "target": "xianMystic",
+    "type": "cross",
     "meaning": 80,
-    "influence": 70,
-    "chronology": 90,
-    "type": "cross"
+    "influence": 60,
+    "chronology": 85
   },
   {
-    "source": "sikh",
-    "target": "sufism",
-    "meaning": 80,
-    "influence": 70,
-    "chronology": 90,
+    "source": "jain",
+    "target": "bigbang",
+    "meaning": 46,
+    "influence": 20,
+    "chronology": 99,
     "type": "cross"
   },
   {
@@ -96,6 +392,286 @@
     "type": "cross"
   },
   {
+    "source": "kabbalah",
+    "target": "advaita",
+    "meaning": 82,
+    "influence": 55,
+    "chronology": 75,
+    "type": "cross"
+  },
+  {
+    "source": "kabbalah",
+    "target": "mahayana",
+    "meaning": 78,
+    "influence": 45,
+    "chronology": 70,
+    "type": "cross"
+  },
+  {
+    "source": "kashmirShaivism",
+    "target": "vajrayana",
+    "type": "cross",
+    "meaning": 85,
+    "influence": 70,
+    "chronology": 92
+  },
+  {
+    "source": "limits-language",
+    "target": "buddhism",
+    "type": "cross",
+    "meaning": 80,
+    "influence": 60,
+    "chronology": 85
+  },
+  {
+    "source": "limits-language",
+    "target": "kabbalah",
+    "type": "cross",
+    "meaning": 60,
+    "influence": 50,
+    "chronology": 80
+  },
+  {
+    "source": "limits-language",
+    "target": "meta-analytic-language",
+    "type": "cross",
+    "meaning": 92,
+    "influence": 80,
+    "chronology": 70
+  },
+  {
+    "source": "limits-language",
+    "target": "meta-phenomenology-existentialism",
+    "type": "cross",
+    "meaning": 70,
+    "influence": 55,
+    "chronology": 60
+  },
+  {
+    "source": "limits-language",
+    "target": "xianMystic",
+    "type": "cross",
+    "meaning": 70,
+    "influence": 55,
+    "chronology": 80
+  },
+  {
+    "source": "limits-language",
+    "target": "zen",
+    "type": "cross",
+    "meaning": 85,
+    "influence": 70,
+    "chronology": 85
+  },
+  {
+    "source": "mahayana",
+    "target": "tantra",
+    "type": "cross",
+    "meaning": 72,
+    "influence": 60,
+    "chronology": 88
+  },
+  {
+    "source": "mahayana",
+    "target": "vajrayana",
+    "type": "cross",
+    "meaning": 78,
+    "influence": 65,
+    "chronology": 90
+  },
+  {
+    "source": "materialism",
+    "target": "classical",
+    "type": "cross",
+    "meaning": 90,
+    "influence": 85,
+    "chronology": 90
+  },
+  {
+    "source": "materialism",
+    "target": "evolution",
+    "type": "cross",
+    "meaning": 90,
+    "influence": 80,
+    "chronology": 95
+  },
+  {
+    "source": "materialism",
+    "target": "meta-atomism",
+    "type": "cross",
+    "meaning": 92,
+    "influence": 80,
+    "chronology": 70
+  },
+  {
+    "source": "materialism",
+    "target": "meta-dialectical-materialism",
+    "type": "cross",
+    "meaning": 85,
+    "influence": 80,
+    "chronology": 50
+  },
+  {
+    "source": "materialism",
+    "target": "meta-materialism",
+    "type": "cross",
+    "meaning": 95,
+    "influence": 85,
+    "chronology": 75
+  },
+  {
+    "source": "materialism",
+    "target": "meta-objectivism",
+    "type": "cross",
+    "meaning": 80,
+    "influence": 55,
+    "chronology": 45
+  },
+  {
+    "source": "materialism",
+    "target": "quantum",
+    "type": "cross",
+    "meaning": 60,
+    "influence": 50,
+    "chronology": 85
+  },
+  {
+    "source": "materialism",
+    "target": "relativity",
+    "type": "cross",
+    "meaning": 65,
+    "influence": 55,
+    "chronology": 85
+  },
+  {
+    "source": "mindBodyDualism",
+    "target": "dvaita",
+    "meaning": 60,
+    "influence": 20,
+    "chronology": 98,
+    "type": "cross"
+  },
+  {
+    "source": "monadology",
+    "target": "jain",
+    "type": "cross",
+    "meaning": 85,
+    "influence": 80,
+    "chronology": 90
+  },
+  {
+    "source": "monadology",
+    "target": "meta-atomism",
+    "type": "cross",
+    "meaning": 72,
+    "influence": 55,
+    "chronology": 50
+  },
+  {
+    "source": "monadology",
+    "target": "meta-rationalism",
+    "type": "cross",
+    "meaning": 78,
+    "influence": 60,
+    "chronology": 55
+  },
+  {
+    "source": "monadology",
+    "target": "theravada",
+    "type": "cross",
+    "meaning": 75,
+    "influence": 70,
+    "chronology": 85
+  },
+  {
+    "source": "monism",
+    "target": "advaita",
+    "type": "cross",
+    "meaning": 95,
+    "influence": 80,
+    "chronology": 90
+  },
+  {
+    "source": "monism",
+    "target": "kabbalah",
+    "type": "cross",
+    "meaning": 75,
+    "influence": 55,
+    "chronology": 80
+  },
+  {
+    "source": "monism",
+    "target": "meta-idealism",
+    "type": "cross",
+    "meaning": 88,
+    "influence": 65,
+    "chronology": 60
+  },
+  {
+    "source": "monism",
+    "target": "meta-neoplatonism",
+    "type": "cross",
+    "meaning": 82,
+    "influence": 55,
+    "chronology": 55
+  },
+  {
+    "source": "monism",
+    "target": "meta-parmenides",
+    "type": "cross",
+    "meaning": 95,
+    "influence": 75,
+    "chronology": 70
+  },
+  {
+    "source": "monism",
+    "target": "quantum",
+    "type": "cross",
+    "meaning": 80,
+    "influence": 50,
+    "chronology": 95
+  },
+  {
+    "source": "monism",
+    "target": "sufism",
+    "type": "cross",
+    "meaning": 80,
+    "influence": 55,
+    "chronology": 80
+  },
+  {
+    "source": "monism",
+    "target": "taoism",
+    "type": "cross",
+    "meaning": 85,
+    "influence": 60,
+    "chronology": 85
+  },
+  {
+    "source": "monism",
+    "target": "vishishta",
+    "type": "cross",
+    "meaning": 82,
+    "influence": 70,
+    "chronology": 85
+  },
+  {
+    "source": "monism",
+    "target": "xianMystic",
+    "type": "cross",
+    "meaning": 70,
+    "influence": 45,
+    "chronology": 75
+  },
+  {
+    "source": "neoConfucian",
+    "target": "catholic",
+    "meaning": 54,
+    "influence": 30,
+    "chronology": 95,
+    "type": "cross"
+  },
+  {
     "source": "neoConfucian",
     "target": "vedanta",
     "meaning": 65,
@@ -104,75 +680,75 @@
     "type": "cross"
   },
   {
-    "source": "confucianClass",
-    "target": "sciMethod",
-    "meaning": 55,
-    "influence": 50,
-    "chronology": 85,
-    "type": "cross"
-  },
-  {
-    "source": "vishishta",
-    "target": "catholic",
-    "meaning": 78,
-    "influence": 72,
-    "chronology": 95,
-    "type": "cross"
-  },
-  {
-    "source": "vadakalai",
-    "target": "catholic",
-    "meaning": 72,
-    "influence": 68,
-    "chronology": 95,
-    "type": "cross"
-  },
-  {
-    "source": "tenkalai",
-    "target": "protestant",
-    "meaning": 72,
-    "influence": 68,
-    "chronology": 95,
-    "type": "cross"
-  },
-  {
-    "source": "dvaita",
-    "target": "reformed",
-    "meaning": 65,
-    "influence": 55,
-    "chronology": 95,
-    "type": "cross"
-  },
-  {
-    "source": "bhakti",
-    "target": "xianMystic",
-    "meaning": 70,
-    "influence": 60,
-    "chronology": 90,
-    "type": "cross"
-  },
-  {
-    "source": "advaita",
-    "target": "zen",
-    "meaning": 85,
-    "influence": 80,
-    "chronology": 95,
-    "type": "cross"
-  },
-  {
-    "source": "taoPhil",
-    "target": "zen",
-    "meaning": 85,
-    "influence": 80,
-    "chronology": 95,
-    "type": "cross"
-  },
-  {
     "source": "pureland",
     "target": "vaishnavism",
     "meaning": 80,
     "influence": 70,
     "chronology": 95,
+    "type": "cross"
+  },
+  {
+    "source": "quantum",
+    "target": "xianMystic",
+    "meaning": 70,
+    "influence": 40,
+    "chronology": 98,
+    "type": "cross"
+  },
+  {
+    "source": "rabbinic",
+    "target": "nyaya",
+    "meaning": 65,
+    "influence": 40,
+    "chronology": 70,
+    "type": "cross"
+  },
+  {
+    "source": "relativity",
+    "target": "processEmpty",
+    "meaning": 68,
+    "influence": 45,
+    "chronology": 98,
+    "type": "cross"
+  },
+  {
+    "source": "shaivaSiddhanta",
+    "target": "vajrayana",
+    "type": "cross",
+    "meaning": 75,
+    "influence": 60,
+    "chronology": 90
+  },
+  {
+    "source": "shaivism",
+    "target": "vajrayana",
+    "type": "cross",
+    "meaning": 78,
+    "influence": 60,
+    "chronology": 90
+  },
+  {
+    "source": "sikh",
+    "target": "bhakti",
+    "meaning": 80,
+    "influence": 70,
+    "chronology": 90,
+    "type": "cross"
+  },
+  {
+    "source": "sikh",
+    "target": "protestant",
+    "meaning": 58,
+    "influence": 42,
+    "chronology": 95,
+    "type": "cross"
+  },
+  {
+    "source": "sikh",
+    "target": "sufism",
+    "meaning": 80,
+    "influence": 70,
+    "chronology": 90,
     "type": "cross"
   },
   {
@@ -192,131 +768,19 @@
     "type": "cross"
   },
   {
-    "source": "advaita",
-    "target": "quantum",
+    "source": "tantra",
+    "target": "vajrayana",
+    "type": "cross",
+    "meaning": 90,
+    "influence": 80,
+    "chronology": 92
+  },
+  {
+    "source": "taoPhil",
+    "target": "zen",
     "meaning": 85,
-    "influence": 55,
+    "influence": 80,
     "chronology": 95,
-    "type": "cross"
-  },
-  {
-    "source": "quantum",
-    "target": "xianMystic",
-    "meaning": 70,
-    "influence": 40,
-    "chronology": 98,
-    "type": "cross"
-  },
-  {
-    "source": "relativity",
-    "target": "processEmpty",
-    "meaning": 68,
-    "influence": 45,
-    "chronology": 98,
-    "type": "cross"
-  },
-  {
-    "source": "waveParticle",
-    "target": "advaita",
-    "meaning": 82,
-    "influence": 50,
-    "chronology": 98,
-    "type": "cross"
-  },
-  {
-    "source": "dvaita",
-    "target": "catholic",
-    "meaning": 70,
-    "influence": 50,
-    "chronology": 95,
-    "type": "cross"
-  },
-  {
-    "source": "dvaita",
-    "target": "orthodox",
-    "meaning": 70,
-    "influence": 45,
-    "chronology": 95,
-    "type": "cross"
-  },
-  {
-    "source": "dvaita",
-    "target": "ashari",
-    "meaning": 68,
-    "influence": 48,
-    "chronology": 95,
-    "type": "cross"
-  },
-  {
-    "source": "dvaita",
-    "target": "zoro",
-    "meaning": 62,
-    "influence": 35,
-    "chronology": 98,
-    "type": "cross"
-  },
-  {
-    "source": "dvaita",
-    "target": "cartesianDualism",
-    "meaning": 62,
-    "influence": 30,
-    "chronology": 98,
-    "type": "cross"
-  },
-  {
-    "source": "sikh",
-    "target": "protestant",
-    "meaning": 58,
-    "influence": 42,
-    "chronology": 95,
-    "type": "cross"
-  },
-  {
-    "source": "confucian",
-    "target": "sciMethod",
-    "meaning": 62,
-    "influence": 55,
-    "chronology": 98,
-    "type": "cross"
-  },
-  {
-    "source": "neoConfucian",
-    "target": "catholic",
-    "meaning": 54,
-    "influence": 30,
-    "chronology": 95,
-    "type": "cross"
-  },
-  {
-    "source": "mindBodyDualism",
-    "target": "dvaita",
-    "meaning": 60,
-    "influence": 20,
-    "chronology": 98,
-    "type": "cross"
-  },
-  {
-    "source": "hinduism",
-    "target": "bigbang",
-    "meaning": 48,
-    "influence": 25,
-    "chronology": 99,
-    "type": "cross"
-  },
-  {
-    "source": "jain",
-    "target": "bigbang",
-    "meaning": 46,
-    "influence": 20,
-    "chronology": 99,
-    "type": "cross"
-  },
-  {
-    "source": "buddhism",
-    "target": "bigbang",
-    "meaning": 44,
-    "influence": 18,
-    "chronology": 99,
     "type": "cross"
   },
   {
@@ -328,52 +792,28 @@
     "type": "cross"
   },
   {
-    "source": "tantra",
-    "target": "vajrayana",
-    "type": "cross",
-    "meaning": 90,
-    "influence": 80,
-    "chronology": 92
+    "source": "tenkalai",
+    "target": "protestant",
+    "meaning": 72,
+    "influence": 68,
+    "chronology": 95,
+    "type": "cross"
   },
   {
-    "source": "kashmirShaivism",
-    "target": "vajrayana",
-    "type": "cross",
-    "meaning": 85,
-    "influence": 70,
-    "chronology": 92
+    "source": "vadakalai",
+    "target": "catholic",
+    "meaning": 72,
+    "influence": 68,
+    "chronology": 95,
+    "type": "cross"
   },
   {
-    "source": "shaivaSiddhanta",
-    "target": "vajrayana",
-    "type": "cross",
-    "meaning": 75,
-    "influence": 60,
-    "chronology": 90
-  },
-  {
-    "source": "shaivism",
-    "target": "vajrayana",
-    "type": "cross",
+    "source": "vishishta",
+    "target": "catholic",
     "meaning": 78,
-    "influence": 60,
-    "chronology": 90
-  },
-  {
-    "source": "yoga",
-    "target": "vajrayana",
-    "type": "cross",
-    "meaning": 70,
-    "influence": 55,
-    "chronology": 90
-  },
-  {
-    "source": "bhakti",
-    "target": "pureland",
-    "type": "cross",
-    "meaning": 68,
-    "influence": 55,
-    "chronology": 90
+    "influence": 72,
+    "chronology": 95,
+    "type": "cross"
   },
   {
     "source": "vishishta",
@@ -384,27 +824,43 @@
     "chronology": 95
   },
   {
-    "source": "advaita",
-    "target": "theravada",
-    "type": "cross",
-    "meaning": 65,
-    "influence": 30,
-    "chronology": 98
+    "source": "waveParticle",
+    "target": "advaita",
+    "meaning": 82,
+    "influence": 50,
+    "chronology": 98,
+    "type": "cross"
   },
   {
-    "source": "mahayana",
-    "target": "tantra",
-    "type": "cross",
-    "meaning": 72,
-    "influence": 60,
-    "chronology": 88
-  },
-  {
-    "source": "mahayana",
+    "source": "yoga",
     "target": "vajrayana",
     "type": "cross",
-    "meaning": 78,
-    "influence": 65,
+    "meaning": 70,
+    "influence": 55,
     "chronology": 90
+  },
+  {
+    "source": "zoro",
+    "target": "christianity",
+    "meaning": 58,
+    "influence": 70,
+    "chronology": 85,
+    "type": "cross"
+  },
+  {
+    "source": "zoro",
+    "target": "islam",
+    "meaning": 55,
+    "influence": 65,
+    "chronology": 85,
+    "type": "cross"
+  },
+  {
+    "source": "zoro",
+    "target": "judaism",
+    "meaning": 62,
+    "influence": 78,
+    "chronology": 85,
+    "type": "cross"
   }
 ]

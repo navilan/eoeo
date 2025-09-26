@@ -84,6 +84,13 @@
     "layer": 5
   },
   {
+    "id": "choiceless-awareness",
+    "label": "Choiceless Awareness",
+    "group": "archetype",
+    "kind": "archetype",
+    "layer": "archetypes"
+  },
+  {
     "id": "christianity",
     "label": "Christianity",
     "group": "christianity",
@@ -119,11 +126,25 @@
     "layer": 5
   },
   {
+    "id": "dialectic",
+    "label": "Dialectic",
+    "group": "archetype",
+    "kind": "archetype",
+    "layer": "archetypes"
+  },
+  {
     "id": "digambara",
     "label": "Digambara",
     "group": "jain",
     "kind": "religion",
     "layer": 4
+  },
+  {
+    "id": "dualism",
+    "label": "Dualism",
+    "group": "archetype",
+    "kind": "archetype",
+    "layer": "archetypes"
   },
   {
     "id": "dvaita",
@@ -138,6 +159,13 @@
     "group": "judaism",
     "kind": "religion",
     "layer": 5
+  },
+  {
+    "id": "eternal-recurrence",
+    "label": "Eternal Recurrence",
+    "group": "archetype",
+    "kind": "archetype",
+    "layer": "archetypes"
   },
   {
     "id": "evolution",
@@ -217,6 +245,13 @@
     "layer": 4
   },
   {
+    "id": "idealism",
+    "label": "Idealism",
+    "group": "archetype",
+    "kind": "archetype",
+    "layer": "archetypes"
+  },
+  {
     "id": "impersonalAbs",
     "label": "Impersonal Absolute",
     "group": "buddhism",
@@ -287,6 +322,13 @@
     "layer": 4
   },
   {
+    "id": "limits-language",
+    "label": "Limits of Language",
+    "group": "archetype",
+    "kind": "archetype",
+    "layer": "archetypes"
+  },
+  {
     "id": "lutheran",
     "label": "Lutheran",
     "group": "christianity",
@@ -306,6 +348,13 @@
     "group": "islam",
     "kind": "religion",
     "layer": 5
+  },
+  {
+    "id": "materialism",
+    "label": "Materialism",
+    "group": "archetype",
+    "kind": "archetype",
+    "layer": "archetypes"
   },
   {
     "id": "maturidi",
@@ -488,6 +537,20 @@
     "group": "judaism",
     "kind": "religion",
     "layer": 6
+  },
+  {
+    "id": "monadology",
+    "label": "Monadology",
+    "group": "archetype",
+    "kind": "archetype",
+    "layer": "archetypes"
+  },
+  {
+    "id": "monism",
+    "label": "Monism",
+    "group": "archetype",
+    "kind": "archetype",
+    "layer": "archetypes"
   },
   {
     "id": "monotheism",

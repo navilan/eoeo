@@ -60,6 +60,8 @@ function render(props: BaseProps<FractalWebAppProps>) {
     showScience: true,
     showResonances: true,
     showWaves: true,
+    showArchetypes: true,
+    showPhilosophy: true,
     perspective: 'oneness',
     wavePerspective: '',
     metric: 'combined' as const,

@@ -25,6 +25,8 @@ export class AppState {
       showScience: config.defaultState.showScience,
       showResonances: config.defaultState.showResonances,
       showWaves: config.defaultState.showWaves,
+      showArchetypes: true,
+      showPhilosophy: true,
       perspective: config.defaultState.perspective,
       wavePerspective: config.defaultState.wavePerspective,
       metric: config.defaultState.metric as MetricType,
@@ -128,6 +130,18 @@ export class AppState {
       case 'waves':
         if (this.state.showWaves !== checked) {
           this.state.showWaves = checked
+          changed = true
+        }
+        break
+      case 'archetypes':
+        if (this.state.showArchetypes !== checked) {
+          this.state.showArchetypes = checked
+          changed = true
+        }
+        break
+      case 'philosophy':
+        if (this.state.showPhilosophy !== checked) {
+          this.state.showPhilosophy = checked
           changed = true
         }
         break

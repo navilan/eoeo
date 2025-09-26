@@ -23,7 +23,19 @@ export function getNodeColor(groupName: string): string {
 }
 
 export function nodeAllowed(node: Node, layerCap: LayerCap): boolean {
-  return node.layer <= parseInt(layerCap)
+  // Handle archetype nodes
+  if (node.layer === 'archetypes') {
+    return parseInt(layerCap) >= 8
+  }
+  return typeof node.layer === 'number' && node.layer <= parseInt(layerCap)
+}
+
+export function nodeVisible(node: Node, state: GraphState): boolean {
+  return (state.showReligions || node.kind !== 'religion') &&
+         (state.showScience || node.kind !== 'science') &&
+         (state.showWaves || node.kind !== 'wave') &&
+         (state.showArchetypes || node.kind !== 'archetype') &&
+         (state.showPhilosophy || node.kind !== 'philosophy')
 }
 
 export function passByMetric(
@@ -79,26 +91,42 @@ export function buildActiveGraph(state: GraphState): { nodes: Node[], edges: Edg
   const activeNodes = nodes.filter(n => nodeAllowed(n, state.layerCap))
   const nodeIds = new Set(activeNodes.map(n => n.id))
 
+  // Create lookup for node visibility
+  const nodeMap = new Map(activeNodes.map(n => [n.id, n]))
+
   const activeEdges: Edge[] = []
 
   // Add lineage edges
   for (const edge of lineageEdges) {
     if (nodeIds.has(edge.source) && nodeIds.has(edge.target)) {
-      activeEdges.push(edge)
+      const sourceNode = nodeMap.get(edge.source)
+      const targetNode = nodeMap.get(edge.target)
+      // Only include edge if both nodes are visible according to toggles
+      if (sourceNode && targetNode &&
+          nodeVisible(sourceNode, state) && nodeVisible(targetNode, state)) {
+        activeEdges.push(edge)
+      }
     }
   }
 
-  // Add resonance edges if enabled
+  // Add resonance edges if enabled (now only cross-type edges)
   if (state.showResonances) {
     for (const edge of resonanceEdges) {
       const m = edge.meaning || 0
       const i = edge.influence || 0
       const c = edge.chronology || 0
 
+      // All resonance edges now have detailed metrics
       if (passByMetric(m, i, c, state.metric) &&
           nodeIds.has(edge.source) &&
           nodeIds.has(edge.target)) {
-        activeEdges.push(edge)
+        const sourceNode = nodeMap.get(edge.source)
+        const targetNode = nodeMap.get(edge.target)
+        // Only include edge if both nodes are visible according to toggles
+        if (sourceNode && targetNode &&
+            nodeVisible(sourceNode, state) && nodeVisible(targetNode, state)) {
+          activeEdges.push(edge)
+        }
       }
     }
   }
@@ -107,7 +135,13 @@ export function buildActiveGraph(state: GraphState): { nodes: Node[], edges: Edg
   if (state.showWaves) {
     for (const edge of waveEdges) {
       if (nodeIds.has(edge.source) && nodeIds.has(edge.target)) {
-        activeEdges.push(edge)
+        const sourceNode = nodeMap.get(edge.source)
+        const targetNode = nodeMap.get(edge.target)
+        // Only include edge if both nodes are visible according to toggles
+        if (sourceNode && targetNode &&
+            nodeVisible(sourceNode, state) && nodeVisible(targetNode, state)) {
+          activeEdges.push(edge)
+        }
       }
     }
   }
