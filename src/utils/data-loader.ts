@@ -23,7 +23,6 @@ export function getNodeColor(groupName: string): string {
 }
 
 export function nodeAllowed(node: Node, layerCap: LayerCap): boolean {
-  if (layerCap === 'all') return true
   return node.layer <= parseInt(layerCap)
 }
 

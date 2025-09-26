@@ -24,7 +24,7 @@ export interface SimulationNode extends Node {
 }
 
 export type MetricType = 'combined' | 'meaning' | 'influence' | 'chronology'
-export type LayerCap = 'all' | '0' | '1' | '2' | '3' | '4' | '5' | '6' | '7'
+export type LayerCap = '0' | '1' | '2' | '3' | '4' | '5' | '6' | '7' | '8'
 export type GroupType = keyof typeof import('../data/group-colors.json')
 
 export interface GraphState {

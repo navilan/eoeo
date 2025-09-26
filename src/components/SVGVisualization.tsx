@@ -39,7 +39,7 @@ export interface SVGVisualizationProps {
 }
 
 // Ring radii for layer visualization
-const RING_RADII = { 0: 0, 1: 120, 2: 240, 3: 380, 4: 520, 5: 660, 6: 800, 7: 940 }
+const RING_RADII = { 0: 0, 1: 120, 2: 240, 3: 380, 4: 520, 5: 660, 6: 800, 7: 940, 8: 1080 }
 
 function render(props: BaseProps<SVGVisualizationProps>) {
   const {
@@ -55,7 +55,7 @@ function render(props: BaseProps<SVGVisualizationProps>) {
   const viewBox = `${-width/2} ${-height/2} ${width} ${height}`
 
   // Create background rings
-  const rings = [1, 2, 3, 4, 5, 6, 7].map(layer => (
+  const rings = [1, 2, 3, 4, 5, 6, 7, 8].map(layer => (
     <circle
       class="graph-ring"
       r={RING_RADII[layer as keyof typeof RING_RADII]}

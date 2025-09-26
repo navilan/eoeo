@@ -77,10 +77,6 @@
   ],
   "layers": [
     {
-      "value": "all",
-      "label": "All (incl. Waves)"
-    },
-    {
       "value": "0",
       "label": "0 Oneness"
     },
@@ -111,6 +107,10 @@
     {
       "value": "7",
       "label": "7 Waves"
+    },
+    {
+      "value": "8",
+      "label": "8 Archetypes"
     }
   ],
   "metrics": [
@@ -168,6 +168,11 @@
       "shape": "dot"
     },
     {
+      "label": "Metaphysics",
+      "color": "#6d28d9",
+      "shape": "dot"
+    },
+    {
       "label": "Science",
       "color": "#9ca3af",
       "shape": "dot"
@@ -194,7 +199,7 @@
     }
   ],
   "defaultState": {
-    "layerCap": "all",
+    "layerCap": "8",
     "showReligions": true,
     "showScience": true,
     "showResonances": true,
@@ -203,5 +208,6 @@
     "wavePerspective": "",
     "metric": "combined",
     "searchQuery": ""
-  }
+  },
+  "overlays": []
 }

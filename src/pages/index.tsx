@@ -17,7 +17,7 @@ const HomePage: DuctPageComponent = () => {
     <FractalWebApp
       initialState={{
         perspective: 'oneness',
-        layerCap: 'all',
+        layerCap: '8',
         metric: 'combined'
       }}
     />

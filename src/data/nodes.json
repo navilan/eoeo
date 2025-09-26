@@ -322,6 +322,139 @@
     "layer": 4
   },
   {
+    "id": "meta-analytic-language",
+    "label": "Analytic Philosophy / Language",
+    "group": "metaphysics",
+    "kind": "philosophy",
+    "layer": 3
+  },
+  {
+    "id": "meta-aristotelian-realism",
+    "label": "Aristotelian Realism / Teleology",
+    "group": "metaphysics",
+    "kind": "philosophy",
+    "layer": 3
+  },
+  {
+    "id": "meta-atomism",
+    "label": "Atomism (Democritus/Epicurus)",
+    "group": "metaphysics",
+    "kind": "philosophy",
+    "layer": 4
+  },
+  {
+    "id": "meta-dialectical-materialism",
+    "label": "Dialectical Materialism",
+    "group": "metaphysics",
+    "kind": "philosophy",
+    "layer": 4
+  },
+  {
+    "id": "meta-empiricism",
+    "label": "Empiricism",
+    "group": "metaphysics",
+    "kind": "philosophy",
+    "layer": 4
+  },
+  {
+    "id": "meta-german-idealism",
+    "label": "German Idealism",
+    "group": "metaphysics",
+    "kind": "philosophy",
+    "layer": 4
+  },
+  {
+    "id": "meta-heraclitus",
+    "label": "Heraclitean Flux",
+    "group": "metaphysics",
+    "kind": "philosophy",
+    "layer": 4
+  },
+  {
+    "id": "meta-idealism",
+    "label": "Idealism",
+    "group": "metaphysics",
+    "kind": "philosophy",
+    "layer": 3
+  },
+  {
+    "id": "meta-materialism",
+    "label": "Materialism",
+    "group": "metaphysics",
+    "kind": "philosophy",
+    "layer": 3
+  },
+  {
+    "id": "meta-modern-currents",
+    "label": "Modern Currents",
+    "group": "metaphysics",
+    "kind": "philosophy",
+    "layer": 3
+  },
+  {
+    "id": "meta-neoplatonism",
+    "label": "Neoplatonism",
+    "group": "metaphysics",
+    "kind": "philosophy",
+    "layer": 4
+  },
+  {
+    "id": "meta-objectivism",
+    "label": "Objectivism",
+    "group": "metaphysics",
+    "kind": "philosophy",
+    "layer": 4
+  },
+  {
+    "id": "meta-parmenides",
+    "label": "Being-as-One",
+    "group": "metaphysics",
+    "kind": "philosophy",
+    "layer": 4
+  },
+  {
+    "id": "meta-phenomenology-existentialism",
+    "label": "Phenomenology & Existentialism",
+    "group": "metaphysics",
+    "kind": "philosophy",
+    "layer": 3
+  },
+  {
+    "id": "meta-pre-socratics",
+    "label": "Pre-Socratics",
+    "group": "metaphysics",
+    "kind": "philosophy",
+    "layer": 3
+  },
+  {
+    "id": "meta-rationalism",
+    "label": "Rationalism",
+    "group": "metaphysics",
+    "kind": "philosophy",
+    "layer": 4
+  },
+  {
+    "id": "meta-rationalism-empiricism",
+    "label": "Rationalism vs Empiricism",
+    "group": "metaphysics",
+    "kind": "philosophy",
+    "layer": 3
+  },
+  {
+    "id": "meta-scholasticism",
+    "label": "Scholasticism (Aquinas/Avicenna/Averroes)",
+    "group": "metaphysics",
+    "kind": "philosophy",
+    "layer": 4
+  },
+  {
+    "id": "metaphysics",
+    "label": "Metaphysics",
+    "group": "metaphysics",
+    "kind": "philosophy",
+    "layer": 2
+  },
+  {
     "id": "methodist",
     "label": "Methodist",
     "group": "christianity",

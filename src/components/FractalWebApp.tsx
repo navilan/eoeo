@@ -280,6 +280,12 @@ function bind(
     }
   })
 
+  appState.on('stateChange', (state: GraphState) => {
+    if (sidebarRef.current) {
+      sidebarRef.current.updateState(state)
+    }
+  })
+
   // UI event handlers - simplified since components use global app state directly
 
   function handleResize(): void {
