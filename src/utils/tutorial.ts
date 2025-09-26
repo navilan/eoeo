@@ -253,7 +253,10 @@ export const tutorialSteps: TutorialStep[] = [
     id: 'navigation',
     title: 'Navigate and Explore',
     text: `Use your mouse or trackpad to pan (drag) and zoom (scroll/pinch) around the visualization.
-           Each node represents a tradition, and the connections show their relationships and influences.`,
+           Each node represents a tradition, and the connections show their relationships and influences.
+
+           <p><strong>Tip:</strong> Don't like how the nodes settled? Use the "Reset View" button to get a fresh
+           random layout and watch the visualization reorganize itself!</p>`,
     buttons: [
       {
         text: 'Previous',
