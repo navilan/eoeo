@@ -9,8 +9,8 @@
     "typecheck": "tsc --noEmit"
   },
   "dependencies": {
-    "@duct-ui/components": "^0.8.3",
-    "@duct-ui/core": "^0.8.3",
+    "@duct-ui/components": "^0.8.4",
+    "@duct-ui/core": "^0.8.4",
     "@kitajs/html": "^4.2.10",
     "clsx": "^2.1.1",
     "lib0": "^0.2.114",
@@ -18,15 +18,15 @@
     "tailwind-merge": "^3.3.1"
   },
   "devDependencies": {
-    "@duct-ui/cli": "^0.8.3",
-    "@duct-ui/router": "^0.8.3",
+    "@duct-ui/cli": "^0.8.4",
+    "@duct-ui/router": "^0.8.4",
     "@tailwindcss/postcss": "^4.1.13",
     "@types/node": "^24.5.2",
     "autoprefixer": "^10.4.21",
-    "daisyui": "^5.1.13",
+    "daisyui": "^5.1.24",
     "postcss": "^8.5.6",
     "tailwindcss": "^4.1.13",
     "typescript": "^5.9.2",
-    "vite": "^7.1.6"
+    "vite": "^7.1.7"
   }
 }

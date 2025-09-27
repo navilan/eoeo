@@ -113,12 +113,18 @@ function bind(
     if (popup) {
       popup.classList.toggle('hidden', !isOpen)
     }
+    if (chevron) {
+      chevron.style.transform = isOpen ? 'rotate(180deg)' : 'rotate(0deg)'
+    }
   }
 
   function closePopup(): void {
     isOpen = false
     if (popup) {
       popup.classList.add('hidden')
+    }
+    if (chevron) {
+      chevron.style.transform = 'rotate(0deg)'
     }
   }
 

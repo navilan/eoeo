@@ -1,5 +1,6 @@
 @import "tailwindcss";
 @import "@duct-ui/components/layout/drawer.css";
+@import "@duct-ui/components/dropdown/select.css";
 @import "shepherd.js/dist/css/shepherd.css";
 
 @plugin "daisyui" {
@@ -172,7 +173,7 @@
   }
 
   .select-button-arrow {
-    @apply text-gray-400 ml-2;
+    @apply text-gray-400 ml-2 transition-transform duration-200;
   }
 
   .select-menu .select-item a {
