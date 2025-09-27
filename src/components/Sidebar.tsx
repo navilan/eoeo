@@ -4,11 +4,12 @@ import { createRef } from "@duct-ui/core"
 import CollapsibleSection from "./CollapsibleSection.js"
 import PerspectiveSelect, { type PerspectiveSelectLogic } from "./PerspectiveSelect.js"
 import ToggleGroup, { type ToggleGroupLogic, type ToggleItem } from "./ToggleGroup.js"
+import ReligionSelector, { type ReligionSelectorLogic } from "./ReligionSelector.js"
 import Legend from "./Legend.js"
 import Select, { type SelectItem } from "@duct-ui/components/dropdown/select"
 import Button from "@duct-ui/components/button/button"
 import { config } from "../utils/data-loader.js"
-import { getGlobalAppState } from "../utils/app-state.js"
+import { getGlobalAppState, getReligionOptions } from "../utils/app-state.js"
 import type { GraphState, LegendItem } from "../types/fractal-types.js"
 
 export interface SidebarEvents extends BaseComponentEvents {
@@ -68,15 +69,17 @@ function render(props: BaseProps<SidebarProps>) {
     attributes: { 'data-value': metric.value }
   }))
 
-  // Toggle items
+  // Toggle items (religions removed - handled by ReligionSelector)
   const toggleItems: ToggleItem[] = [
-    { id: 'religions', label: 'Religions', checked: state.showReligions },
     { id: 'science', label: 'Science', checked: state.showScience },
     { id: 'resonances', label: 'Resonances', checked: state.showResonances },
     { id: 'waves', label: 'Waves', checked: state.showWaves },
     { id: 'archetypes', label: 'Archetypes', checked: state.showArchetypes },
     { id: 'philosophy', label: 'Philosophy', checked: state.showPhilosophy }
   ]
+
+  // Religion options for the religion selector
+  const religionOptions = getReligionOptions()
 
   return (
     <div
@@ -127,6 +130,18 @@ function render(props: BaseProps<SidebarProps>) {
 
       <CollapsibleSection title="Layers & Toggles" isOpen={true}>
         <div data-tutorial="toggles">
+          {/* Religion Selector */}
+          <div class="mb-4">
+            <ReligionSelector
+              religions={state.religions}
+              options={religionOptions}
+              on:change={(el: HTMLElement, religions: Record<string, boolean>) => {
+                const appState = getGlobalAppState()
+                appState.setReligions(religions)
+              }}
+            />
+          </div>
+
           <ToggleGroup
             ref={togglesRef}
             items={toggleItems}

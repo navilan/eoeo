@@ -1,7 +1,7 @@
 import { createBlueprint, type BindReturn, type BaseComponentEvents, type BaseProps, renderProps } from "@duct-ui/core/blueprint"
 import { EventEmitter } from "@duct-ui/core/shared"
 import { ForceSimulation } from "../utils/force-simulation.js"
-import { getNodeColor } from "../utils/data-loader.js"
+import { getNodeColor, nodeVisible } from "../utils/data-loader.js"
 import GraphNode from "./GraphNode.js"
 import GraphEdge from "./GraphEdge.js"
 import GraphLabel from "./GraphLabel.js"
@@ -94,12 +94,7 @@ function render(props: BaseProps<SVGVisualizationProps>) {
   // Render nodes
   const nodeElements = nodes.map(node => {
     const simNode = node as SimulationNode
-    const isVisible =
-      (state.showReligions || simNode.kind !== 'religion') &&
-      (state.showScience || simNode.kind !== 'science') &&
-      (state.showWaves || simNode.kind !== 'wave') &&
-      (state.showArchetypes || simNode.kind !== 'archetype') &&
-      (state.showPhilosophy || simNode.kind !== 'philosophy')
+    const isVisible = nodeVisible(simNode, state)
 
     return (
       <GraphNode
@@ -116,10 +111,7 @@ function render(props: BaseProps<SVGVisualizationProps>) {
   // Render labels
   const labelElements = nodes.map(node => {
     const simNode = node as SimulationNode
-    const isVisible =
-      (state.showReligions || simNode.kind !== 'religion') &&
-      (state.showScience || simNode.kind !== 'science') &&
-      (state.showWaves || simNode.kind !== 'wave')
+    const isVisible = nodeVisible(simNode, state)
 
     return (
       <GraphLabel
@@ -271,12 +263,7 @@ function bind(
 
     // Render new nodes
     currentNodes.forEach((node) => {
-      const isVisible =
-        (currentState.showReligions || node.kind !== 'religion') &&
-        (currentState.showScience || node.kind !== 'science') &&
-        (currentState.showWaves || node.kind !== 'wave') &&
-        (currentState.showArchetypes || node.kind !== 'archetype') &&
-        (currentState.showPhilosophy || node.kind !== 'philosophy')
+      const isVisible = nodeVisible(node, currentState)
 
 
       if (!isVisible) return

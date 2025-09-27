@@ -57,6 +57,7 @@ function render(props: BaseProps<FractalWebAppProps>) {
   const defaultState = {
     layerCap: config.defaultState.layerCap as LayerCap,
     showReligions: true,
+    religions: {} as Record<string, boolean>, // Will be properly set by AppState
     showScience: true,
     showResonances: true,
     showWaves: true,

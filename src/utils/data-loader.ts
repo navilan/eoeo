@@ -35,8 +35,12 @@ export function nodeAllowed(node: Node, layerCap: LayerCap): boolean {
 }
 
 export function nodeVisible(node: Node, state: GraphState): boolean {
-  return (state.showReligions || node.kind !== 'religion') &&
-         (state.showScience || node.kind !== 'science') &&
+  // Check individual religion visibility
+  if (node.kind === 'religion') {
+    return state.showReligions && (state.religions[node.group] !== false)
+  }
+
+  return (state.showScience || node.kind !== 'science') &&
          (state.showWaves || node.kind !== 'wave') &&
          (state.showArchetypes || node.kind !== 'archetype') &&
          (state.showPhilosophy || node.kind !== 'philosophy')

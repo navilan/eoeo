@@ -13,6 +13,7 @@ export class ForceSimulation {
   private nodes: SimulationNode[] = []
   private edges: Edge[] = []
   private nodeById = new Map<string, SimulationNode>()
+  private lineageConnections = new Map<string, Set<string>>()
   private animationId: number | null = null
   private config: SimulationConfig
   private focusNodeId = 'oneness'
@@ -36,6 +37,9 @@ export class ForceSimulation {
 
     this.edges = edges
     this.nodeById = new Map(this.nodes.map(n => [n.id, n]))
+
+    // Build lineage connections map for clustering
+    this.buildLineageConnections()
   }
 
   setFocus(nodeId: string, waveFocusId = ''): void {
@@ -53,6 +57,58 @@ export class ForceSimulation {
 
   private randomPosition(min: number, max: number): number {
     return min + Math.random() * (max - min)
+  }
+
+  private buildLineageConnections(): void {
+    this.lineageConnections.clear()
+
+    // Initialize empty sets for all nodes
+    for (const node of this.nodes) {
+      this.lineageConnections.set(node.id, new Set<string>())
+    }
+
+    // Build bidirectional lineage connections
+    for (const edge of this.edges) {
+      if (edge.type === 'lineage') {
+        const sourceConnections = this.lineageConnections.get(edge.source)
+        const targetConnections = this.lineageConnections.get(edge.target)
+
+        if (sourceConnections && targetConnections) {
+          sourceConnections.add(edge.target)
+          targetConnections.add(edge.source)
+        }
+      }
+    }
+
+    // Add transitive connections within lineage clusters
+    // This ensures nodes in the same lineage tree are all connected
+    let changed = true
+    while (changed) {
+      changed = false
+      for (const [nodeId, connections] of this.lineageConnections) {
+        const currentSize = connections.size
+        const newConnections = new Set(connections)
+
+        for (const connectedId of connections) {
+          const connectedConnections = this.lineageConnections.get(connectedId)
+          if (connectedConnections) {
+            for (const transitiveId of connectedConnections) {
+              newConnections.add(transitiveId)
+            }
+          }
+        }
+
+        if (newConnections.size > currentSize) {
+          this.lineageConnections.set(nodeId, newConnections)
+          changed = true
+        }
+      }
+    }
+  }
+
+  private areInSameLineage(nodeA: string, nodeB: string): boolean {
+    const connectionsA = this.lineageConnections.get(nodeA)
+    return connectionsA ? connectionsA.has(nodeB) : false
   }
 
   private shortestDistances(rootId: string): Map<string, number> {
@@ -250,6 +306,11 @@ export class ForceSimulation {
         if (nodeA.kind === 'archetype' || nodeA.kind === 'wave' ||
             nodeB.kind === 'archetype' || nodeB.kind === 'wave') {
           repulsionBase = 3200  // Double repulsion for archetype/wave nodes
+        }
+
+        // Increase repulsion between nodes not in the same lineage to keep lineage clusters together
+        if (!this.areInSameLineage(nodeA.id, nodeB.id)) {
+          repulsionBase *= 1.5  // 50% more repulsion for non-lineage pairs
         }
 
         const repulsion = repulsionBase / (distanceSquared + 10)

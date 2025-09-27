@@ -30,6 +30,7 @@ export type GroupType = keyof typeof import('../data/group-colors.json')
 export interface GraphState {
   layerCap: LayerCap
   showReligions: boolean
+  religions: Record<string, boolean>
   showScience: boolean
   showResonances: boolean
   showWaves: boolean

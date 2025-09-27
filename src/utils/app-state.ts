@@ -1,7 +1,71 @@
 // Application state management for Fractal Web
 import { ObservableV2 as Observable } from "lib0/observable"
 import { buildActiveGraph, config } from "./data-loader.js"
+import nodes from "../data/nodes.json"
+import colors from "../data/group-colors.json"
 import type { GraphState, Node, Edge, Transform, MetricType, LayerCap } from "../types/fractal-types.js"
+
+// Helper function to build default religions state from data
+function getDefaultReligions(): Record<string, boolean> {
+  const religions: Record<string, boolean> = {}
+
+  // Get all unique religion groups from nodes data
+  const religionGroups = new Set<string>()
+  for (const node of nodes) {
+    if (node.kind === 'religion') {
+      religionGroups.add(node.group)
+    }
+  }
+
+  // Set all religions to true by default
+  for (const group of religionGroups) {
+    religions[group] = true
+  }
+
+  return religions
+}
+
+// Helper function to get religion options for UI components
+export function getReligionOptions(): Array<{id: string, label: string, color: string}> {
+  const religionGroups = new Set<string>()
+  const groupNodes = new Map<string, any>()
+
+  // Get all unique religion groups and sample nodes for labels
+  for (const node of nodes) {
+    if (node.kind === 'religion') {
+      religionGroups.add(node.group)
+      if (!groupNodes.has(node.group)) {
+        groupNodes.set(node.group, node)
+      }
+    }
+  }
+
+  // Use imported group colors
+
+  return Array.from(religionGroups).map(group => ({
+    id: group,
+    label: capitalizeGroup(group),
+    color: (colors as any)[group] || '#9ca3af'
+  })).sort((a, b) => a.label.localeCompare(b.label))
+}
+
+// Helper to capitalize group names for display
+function capitalizeGroup(group: string): string {
+  const groupMap: Record<string, string> = {
+    'buddhism': 'Buddhism',
+    'christianity': 'Christianity',
+    'confucian': 'Confucianism',
+    'core': 'Core',
+    'hinduism': 'Hinduism',
+    'islam': 'Islam',
+    'jain': 'Jainism',
+    'judaism': 'Judaism',
+    'sikh': 'Sikhism',
+    'taoism': 'Taoism',
+    'zoro': 'Zoroastrianism'
+  }
+  return groupMap[group] || group.charAt(0).toUpperCase() + group.slice(1)
+}
 
 export interface AppStateEvents extends Record<string, any> {
   stateChange: (state: GraphState) => void
@@ -22,6 +86,7 @@ export class AppState {
     this.state = {
       layerCap: config.defaultState.layerCap as LayerCap,
       showReligions: config.defaultState.showReligions,
+      religions: getDefaultReligions(),
       showScience: config.defaultState.showScience,
       showResonances: config.defaultState.showResonances,
       showWaves: config.defaultState.showWaves,
@@ -151,6 +216,12 @@ export class AppState {
       this.emitStateChange()
       this.updateGraph()
     }
+  }
+
+  setReligions(religions: Record<string, boolean>): void {
+    this.state.religions = { ...religions }
+    this.emitStateChange()
+    this.updateGraph()
   }
 
   setTransform(transform: Transform): void {
