@@ -2,7 +2,7 @@ import { createBlueprint, type BindReturn, type BaseComponentEvents, type BasePr
 import { EventEmitter } from "@duct-ui/core/shared"
 import { createRef } from "@duct-ui/core"
 import { createAppState } from "../utils/app-state.js"
-import { buildActiveGraph, config } from "../utils/data-loader.js"
+import { buildActiveGraph, createDefaultState } from "../utils/data-loader.js"
 import Sidebar, { type SidebarLogic } from "./Sidebar.js"
 import SVGVisualization, { type SVGVisualizationLogic } from "./SVGVisualization.js"
 import Button from "@duct-ui/components/button/button"
@@ -55,18 +55,7 @@ function render(props: BaseProps<FractalWebAppProps>) {
 
   // Build the initial graph data synchronously for server-side rendering
   const defaultState = {
-    layerCap: config.defaultState.layerCap as LayerCap,
-    showReligions: true,
-    religions: {} as Record<string, boolean>, // Will be properly set by AppState
-    showScience: true,
-    showResonances: true,
-    showWaves: true,
-    showArchetypes: false,
-    showMetaphysics: true,
-    perspective: 'oneness',
-    wavePerspective: '',
-    metric: 'combined' as const,
-    searchQuery: '',
+    ...createDefaultState(),
     ...initialState
   }
 

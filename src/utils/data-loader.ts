@@ -216,3 +216,32 @@ export function generatePerspectives(): Array<{value: string, label: string}> {
 
   return perspectives
 }
+
+// Helper function to get default religions state from data
+function getDefaultReligions(): Record<string, boolean> {
+  const religionMap: Record<string, boolean> = {}
+  for (const node of nodes) {
+    if (node.kind === 'religion') {
+      religionMap[node.group] = true
+    }
+  }
+  return religionMap
+}
+
+// Centralized function to create default state
+export function createDefaultState(): GraphState {
+  return {
+    layerCap: config.defaultState.layerCap as LayerCap,
+    showReligions: config.defaultState.showReligions,
+    religions: getDefaultReligions(),
+    showScience: config.defaultState.showScience,
+    showResonances: config.defaultState.showResonances,
+    showWaves: config.defaultState.showWaves,
+    showArchetypes: config.defaultState.showArchetypes,
+    showMetaphysics: config.defaultState.showMetaphysics,
+    perspective: config.defaultState.perspective,
+    wavePerspective: config.defaultState.wavePerspective,
+    metric: config.defaultState.metric as MetricType,
+    searchQuery: config.defaultState.searchQuery
+  }
+}

@@ -1,29 +1,10 @@
 // Application state management for Fractal Web
 import { ObservableV2 as Observable } from "lib0/observable"
-import { buildActiveGraph, config } from "./data-loader.js"
+import { buildActiveGraph, createDefaultState } from "./data-loader.js"
 import nodes from "../data/nodes.json"
 import colors from "../data/group-colors.json"
 import type { GraphState, Node, Edge, Transform, MetricType, LayerCap } from "../types/fractal-types.js"
 
-// Helper function to build default religions state from data
-function getDefaultReligions(): Record<string, boolean> {
-  const religions: Record<string, boolean> = {}
-
-  // Get all unique religion groups from nodes data
-  const religionGroups = new Set<string>()
-  for (const node of nodes) {
-    if (node.kind === 'religion') {
-      religionGroups.add(node.group)
-    }
-  }
-
-  // Set all religions to true by default
-  for (const group of religionGroups) {
-    religions[group] = true
-  }
-
-  return religions
-}
 
 // Helper function to get religion options for UI components
 export function getReligionOptions(): Array<{id: string, label: string, color: string}> {
@@ -84,18 +65,7 @@ export class AppState {
 
   constructor(initialState?: Partial<GraphState>) {
     this.state = {
-      layerCap: config.defaultState.layerCap as LayerCap,
-      showReligions: config.defaultState.showReligions,
-      religions: getDefaultReligions(),
-      showScience: config.defaultState.showScience,
-      showResonances: config.defaultState.showResonances,
-      showWaves: config.defaultState.showWaves,
-      showArchetypes: false,
-      showMetaphysics: true,
-      perspective: config.defaultState.perspective,
-      wavePerspective: config.defaultState.wavePerspective,
-      metric: config.defaultState.metric as MetricType,
-      searchQuery: config.defaultState.searchQuery,
+      ...createDefaultState(),
       ...initialState
     }
 

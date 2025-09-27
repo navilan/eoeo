@@ -203,7 +203,7 @@ function render(props: BaseProps<SidebarProps>) {
 
       <CollapsibleSection title="Legend">
         <Legend
-          items={config.legend}
+          items={config.legend as LegendItem[]}
           columns={2}
         />
       </CollapsibleSection>
