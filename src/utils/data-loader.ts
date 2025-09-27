@@ -43,7 +43,7 @@ export function nodeVisible(node: Node, state: GraphState): boolean {
   return (state.showScience || node.kind !== 'science') &&
          (state.showWaves || node.kind !== 'wave') &&
          (state.showArchetypes || node.kind !== 'archetype') &&
-         (state.showPhilosophy || node.kind !== 'philosophy')
+         (state.showMetaphysics || node.kind !== 'metaphysics')
 }
 
 export function passByMetric(
@@ -155,4 +155,64 @@ export function buildActiveGraph(state: GraphState): { nodes: Node[], edges: Edg
   }
 
   return { nodes: activeNodes, edges: activeEdges }
+}
+
+// Helper to capitalize group names for display
+function capitalizeGroupName(group: string): string {
+  const groupMap: Record<string, string> = {
+    'buddhism': 'Buddhism',
+    'christianity': 'Christianity',
+    'confucian': 'Confucianism',
+    'core': 'Core',
+    'hinduism': 'Hinduism',
+    'islam': 'Islam',
+    'jain': 'Jainism',
+    'judaism': 'Judaism',
+    'sikh': 'Sikhism',
+    'taoism': 'Taoism',
+    'zoro': 'Zoroastrianism',
+    'science': 'Science',
+    'metaphysics': 'Metaphysics'
+  }
+  return groupMap[group] || group.charAt(0).toUpperCase() + group.slice(1)
+}
+
+// Generate perspectives dynamically from node data
+export function generatePerspectives(): Array<{value: string, label: string}> {
+  const perspectives: Array<{value: string, label: string}> = []
+
+  // Always include Oneness first
+  perspectives.push({ value: 'oneness', label: 'Oneness' })
+
+  // Get all religious root nodes (those that could be perspective centers)
+  const religionGroups = new Set<string>()
+  const metaphysicsGroups = new Set<string>()
+
+  for (const node of nodes) {
+    if (node.kind === 'religion' && node.group !== 'core') {
+      // Exclude 'core' group since it contains fundamental concepts like oneness
+      religionGroups.add(node.group)
+    } else if (node.kind === 'metaphysics') {
+      // Add metaphysics nodes that could serve as perspectives
+      metaphysicsGroups.add(node.group)
+    }
+  }
+
+  // Add religious perspectives (sorted)
+  Array.from(religionGroups).sort().forEach(group => {
+    perspectives.push({
+      value: group,
+      label: capitalizeGroupName(group)
+    })
+  })
+
+  // Add Science perspective
+  perspectives.push({ value: 'scienceRel', label: 'Science' })
+
+  // Add Metaphysics as a single perspective if we have metaphysics nodes
+  if (metaphysicsGroups.size > 0) {
+    perspectives.push({ value: 'metaphysics', label: 'Metaphysics' })
+  }
+
+  return perspectives
 }

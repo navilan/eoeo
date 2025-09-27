@@ -3,7 +3,7 @@ export interface Node {
   id: string
   label: string
   group: string
-  kind: 'religion' | 'science' | 'wave' | 'archetype' | 'philosophy'
+  kind: 'religion' | 'science' | 'wave' | 'archetype' | 'metaphysics'
   layer: number | 'archetypes'
 }
 
@@ -35,7 +35,7 @@ export interface GraphState {
   showResonances: boolean
   showWaves: boolean
   showArchetypes: boolean
-  showPhilosophy: boolean
+  showMetaphysics: boolean
   perspective: string
   wavePerspective: string
   metric: MetricType

@@ -73,8 +73,8 @@ function render(props: BaseProps<GraphNodeProps>) {
         stroke-width="1.2"
       />
     )
-  } else if (node.kind === 'philosophy') {
-    // Filled diamond for philosophy nodes (to test)
+  } else if (node.kind === 'metaphysics') {
+    // Filled diamond for metaphysics nodes
     shape = (
       <rect
         x="-6"

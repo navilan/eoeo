@@ -8,7 +8,7 @@ import ReligionSelector, { type ReligionSelectorLogic } from "./ReligionSelector
 import Legend from "./Legend.js"
 import Select, { type SelectItem } from "@duct-ui/components/dropdown/select"
 import Button from "@duct-ui/components/button/button"
-import { config } from "../utils/data-loader.js"
+import { config, generatePerspectives } from "../utils/data-loader.js"
 import { getGlobalAppState, getReligionOptions } from "../utils/app-state.js"
 import type { GraphState, LegendItem } from "../types/fractal-types.js"
 
@@ -75,7 +75,7 @@ function render(props: BaseProps<SidebarProps>) {
     { id: 'resonances', label: 'Resonances', checked: state.showResonances },
     { id: 'waves', label: 'Waves', checked: state.showWaves },
     { id: 'archetypes', label: 'Archetypes', checked: state.showArchetypes },
-    { id: 'philosophy', label: 'Philosophy', checked: state.showPhilosophy }
+    { id: 'metaphysics', label: 'Metaphysics', checked: state.showMetaphysics }
   ]
 
   // Religion options for the religion selector
@@ -93,7 +93,7 @@ function render(props: BaseProps<SidebarProps>) {
           <PerspectiveSelect
             ref={perspectiveRef}
             label="Perspective"
-            options={config.perspectives}
+            options={generatePerspectives()}
             value={state.perspective}
             on:change={(el: HTMLElement, perspective: string) => {
               const event = new CustomEvent('sidebar-perspective-change', { detail: perspective })
@@ -128,7 +128,31 @@ function render(props: BaseProps<SidebarProps>) {
 
       </CollapsibleSection>
 
-      <CollapsibleSection title="Layers & Toggles" isOpen={true}>
+      <CollapsibleSection title="Layers" isOpen={true}>
+        <div class="space-y-2" data-tutorial="layers">
+          <label class="text-sm font-medium text-gray-300 block">
+            Show up to layer:
+          </label>
+          <Select
+            items={layerItems}
+            buttonClass="w-full px-3 py-2 text-sm bg-gray-800 border border-gray-600 rounded-lg text-gray-100 flex justify-between items-center"
+            menuClass="menu bg-gray-800 border border-gray-600 rounded-lg shadow-lg mt-1 w-full min-w-max z-50 p-2"
+            itemClass=""
+            labelClass="font-medium text-gray-100"
+            selectedIconClass="w-4 h-4 mr-2"
+            data-layer-select
+            on:selectionChange={(el: HTMLElement, item: SelectItem, index: number) => {
+              const layerValue = item.attributes?.['data-value'] || config.layers[index]?.value
+              if (layerValue) {
+                const appState = getGlobalAppState()
+                appState.setLayerCap(layerValue)
+              }
+            }}
+          />
+        </div>
+      </CollapsibleSection>
+
+      <CollapsibleSection title="Toggles" isOpen={true}>
         <div data-tutorial="toggles">
           {/* Religion Selector */}
           <div class="mb-4">
@@ -152,30 +176,6 @@ function render(props: BaseProps<SidebarProps>) {
             }}
           />
         </div>
-
-        <div class="space-y-2" data-tutorial="layers">
-          <label class="text-sm font-medium text-gray-300 block">
-            Show up to layer:
-          </label>
-          <Select
-            items={layerItems}
-            buttonClass="w-full px-3 py-2 text-sm bg-gray-800 border border-gray-600 rounded-lg text-gray-100 flex justify-between items-center"
-            menuClass="menu bg-gray-800 border border-gray-600 rounded-lg shadow-lg mt-1 w-full min-w-max z-50 p-2"
-            itemClass=""
-            labelClass="font-medium text-gray-100"
-            selectedIconClass="w-4 h-4 mr-2"
-            data-layer-select
-            on:selectionChange={(el: HTMLElement, item: SelectItem, index: number) => {
-              const layerValue = item.attributes?.['data-value'] || config.layers[index]?.value
-              if (layerValue) {
-                const appState = getGlobalAppState()
-                appState.setLayerCap(layerValue)
-              }
-            }}
-          />
-        </div>
-
-        <Legend items={config.legend as LegendItem[]} columns={2} />
       </CollapsibleSection>
 
       <CollapsibleSection title="Resonance Metric">
@@ -198,6 +198,13 @@ function render(props: BaseProps<SidebarProps>) {
               appState.setMetric(metricValue)
             }
           }}
+        />
+      </CollapsibleSection>
+
+      <CollapsibleSection title="Legend">
+        <Legend
+          items={config.legend}
+          columns={2}
         />
       </CollapsibleSection>
     </div>
@@ -228,7 +235,7 @@ function bind(
       togglesRef.current.setToggle('resonances', state.showResonances)
       togglesRef.current.setToggle('waves', state.showWaves)
       togglesRef.current.setToggle('archetypes', state.showArchetypes)
-      togglesRef.current.setToggle('philosophy', state.showPhilosophy)
+      togglesRef.current.setToggle('metaphysics', state.showMetaphysics)
     }
 
     // Update layer and metric selects would need select component refs

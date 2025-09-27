@@ -339,6 +339,16 @@ export class ForceSimulation {
     for (const node of this.nodes) {
       node.vx *= 0.86
       node.vy *= 0.86
+
+      // Add very subtle rotational motion to prevent overlap and create dynamics
+      const rotationStrength = 0.00002
+      const angle = Math.atan2(node.y, node.x)
+      const distance = Math.hypot(node.x, node.y)
+
+      // Add tangential velocity (perpendicular to radial direction)
+      node.vx += -Math.sin(angle) * rotationStrength * distance
+      node.vy += Math.cos(angle) * rotationStrength * distance
+
       node.x += node.vx
       node.y += node.vy
     }

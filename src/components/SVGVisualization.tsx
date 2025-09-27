@@ -304,8 +304,8 @@ function bind(
         nodeShape.setAttribute('fill', color)
         nodeShape.setAttribute('stroke', '#0b0f14')
         nodeShape.setAttribute('stroke-width', '1.2')
-      } else if (node.kind === 'philosophy') {
-        // Filled diamond for philosophy nodes
+      } else if (node.kind === 'metaphysics') {
+        // Filled diamond for metaphysics nodes
         nodeShape = document.createElementNS('http://www.w3.org/2000/svg', 'rect')
         nodeShape.setAttribute('x', '-6')
         nodeShape.setAttribute('y', '-6')
